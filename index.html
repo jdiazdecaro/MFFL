@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Data-driven grades for all 16 teams in the MFFL 2026 dynasty superflex rookie draft.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img, picture, video, canvas, svg { display: block; max-width: 100%; }
+  input, button, textarea, select { font: inherit; }
+  p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+<title>MFFL 2026 Rookie Draft — Grades</title>
+
+<style>
+  :root {
+    --ground: #F5F6F8;
+    --panel: #FFFFFF;
+    --panel-2: #EDEFF3;
+    --ink: #171B24;
+    --ink-2: #454C5C;
+    --ink-3: #6E7686;
+    --rule: #D8DCE4;
+    --rule-strong: #BFC5D0;
+    --gold: #9A6A11;
+    --gold-bright: #C8891B;
+    --teal: #24605C;
+    --grade-a: #2C6E49;
+    --grade-b: #24605C;
+    --grade-c: #6E7686;
+    --grade-d: #96412F;
+    --mine: #C8891B;
+    --shadow: 0 1px 2px rgba(23,27,36,.06), 0 8px 24px -12px rgba(23,27,36,.18);
+
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0F1218;
+      --panel: #161A22;
+      --panel-2: #1D222C;
+      --ink: #EEF1F6;
+      --ink-2: #B4BCCA;
+      --ink-3: #838C9C;
+      --rule: #262C38;
+      --rule-strong: #39414F;
+      --gold: #E0A63A;
+      --gold-bright: #F0BC55;
+      --teal: #5FAFA8;
+      --grade-a: #5DBE86;
+      --grade-b: #5FAFA8;
+      --grade-c: #939BAA;
+      --grade-d: #D9765F;
+      --mine: #F0BC55;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0F1218;
+    --panel: #161A22;
+    --panel-2: #1D222C;
+    --ink: #EEF1F6;
+    --ink-2: #B4BCCA;
+    --ink-3: #838C9C;
+    --rule: #262C38;
+    --rule-strong: #39414F;
+    --gold: #E0A63A;
+    --gold-bright: #F0BC55;
+    --teal: #5FAFA8;
+    --grade-a: #5DBE86;
+    --grade-b: #5FAFA8;
+    --grade-c: #939BAA;
+    --grade-d: #D9765F;
+    --mine: #F0BC55;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+  }
+
+  :root[data-theme="light"] {
+    --ground: #F5F6F8;
+    --panel: #FFFFFF;
+    --panel-2: #EDEFF3;
+    --ink: #171B24;
+    --ink-2: #454C5C;
+    --ink-3: #6E7686;
+    --rule: #D8DCE4;
+    --rule-strong: #BFC5D0;
+    --gold: #9A6A11;
+    --gold-bright: #C8891B;
+    --teal: #24605C;
+    --grade-a: #2C6E49;
+    --grade-b: #24605C;
+    --grade-c: #6E7686;
+    --grade-d: #96412F;
+    --mine: #C8891B;
+    --shadow: 0 1px 2px rgba(23,27,36,.06), 0 8px 24px -12px rgba(23,27,36,.18);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 40px 22px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; flex-direction: column; gap: 14px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.1rem, 6vw, 3.3rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .dek {
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    max-width: 62ch;
+    text-wrap: pretty;
+  }
+  .meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 6px;
+  }
+  .meta-strip div {
+    padding: 12px 22px 12px 0;
+    margin-right: 22px;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .meta-strip div:last-child { border-right: 0; margin-right: 0; }
+  .meta-k {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .meta-v { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; }
+
+  /* ---------- method ---------- */
+  .method {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin: 0;
+  }
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px 26px;
+  }
+  .method-item { display: flex; flex-direction: column; gap: 4px; }
+  .method-item dt {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .method-item dd { margin: 0; font-size: .92rem; color: var(--ink-2); }
+  .caveat {
+    font-size: .88rem;
+    color: var(--ink-3);
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+
+  /* ---------- leaderboard ---------- */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 3px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font-variant-numeric: tabular-nums; }
+  thead th {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-align: right;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule-strong);
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  thead th:nth-child(1), thead th:nth-child(2), thead th:nth-child(3) { text-align: left; }
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--rule);
+    text-align: right;
+    font-family: var(--mono);
+    font-size: .84rem;
+    color: var(--ink-2);
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.rk { color: var(--ink-3); text-align: left; width: 34px; }
+  td.mgr {
+    text-align: left;
+    font-family: var(--sans);
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  td.gr { text-align: left; width: 54px; }
+  tbody tr.is-mine { background: color-mix(in srgb, var(--gold) 9%, transparent); }
+  tbody tr.is-mine td.mgr { color: var(--gold); }
+  .you-tag {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: 1px;
+  }
+
+  .grade {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.02rem;
+    letter-spacing: -.02em;
+  }
+  .g-a { color: var(--grade-a); }
+  .g-b { color: var(--grade-b); }
+  .g-c { color: var(--grade-c); }
+  .g-d { color: var(--grade-d); }
+
+  /* ---------- team cards ---------- */
+  .cards { display: flex; flex-direction: column; gap: 18px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .card.mine { border-color: var(--gold); }
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 18px 24px 14px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel-2);
+  }
+  .card-rank {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: .08em;
+  }
+  .card-name {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-right: auto;
+  }
+  .card-grade { font-family: var(--serif); font-size: 1.9rem; font-weight: 700; letter-spacing: -.03em; }
+  .card-body { padding: 20px 24px 22px; display: flex; flex-direction: column; gap: 16px; }
+  .verdict { font-size: .97rem; color: var(--ink-2); max-width: 70ch; text-wrap: pretty; }
+  .verdict strong { color: var(--ink); font-weight: 600; }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border: 1px solid var(--rule-strong);
+    border-radius: 2px;
+    color: var(--ink-3);
+    white-space: nowrap;
+  }
+  .chip b { color: var(--ink); font-weight: 600; }
+  .chip.pos { border-color: var(--grade-a); color: var(--grade-a); }
+  .chip.pos b { color: var(--grade-a); }
+  .chip.neg { border-color: var(--grade-d); color: var(--grade-d); }
+  .chip.neg b { color: var(--grade-d); }
+
+  .picks { display: flex; flex-direction: column; gap: 0; }
+  .pick {
+    display: grid;
+    grid-template-columns: 46px 1fr auto;
+    gap: 12px;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--rule);
+    font-size: .9rem;
+  }
+  .pick:last-child { border-bottom: 0; }
+  .pk-no { font-family: var(--mono); font-size: .78rem; color: var(--ink-3); }
+  .pk-name { color: var(--ink); }
+  .pk-name em { font-style: normal; color: var(--ink-3); font-size: .84rem; margin-left: 7px; }
+  .pk-tag {
+    font-family: var(--mono);
+    font-size: .74rem;
+    color: var(--ink-3);
+    white-space: nowrap;
+    text-align: right;
+  }
+  .pk-tag.starter { color: var(--gold); }
+  .pk-tag.steal { color: var(--grade-a); }
+  .pk-tag.reach { color: var(--grade-d); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    font-size: .84rem;
+    color: var(--ink-3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media (max-width: 560px) {
+    .card-head { padding: 16px 18px 12px; }
+    .card-body { padding: 16px 18px 18px; }
+    .pick { grid-template-columns: 40px 1fr; }
+    .pk-tag { grid-column: 2; text-align: left; }
+    .meta-strip div { padding-right: 16px; margin-right: 16px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">MFFL · Dynasty Superflex · 2026 Rookie Draft</div>
+    <h1>Draft Grades: All Sixteen</h1>
+    <p class="dek">Eighty picks, five rounds, sixteen teams. Graded on the talent actually acquired, the value captured relative to where each player went, whether the picks addressed a real hole, and how many drafted rookies have a path to the field in 2026.</p>
+    <div class="meta-strip">
+      <div><span class="meta-k">Format</span><span class="meta-v">2QB / Superflex</span></div>
+      <div><span class="meta-k">Teams</span><span class="meta-v">16</span></div>
+      <div><span class="meta-k">Rounds</span><span class="meta-v">5 · linear</span></div>
+      <div><span class="meta-k">Picks</span><span class="meta-v">80</span></div>
+      <div><span class="meta-k">NFL starters drafted</span><span class="meta-v">5</span></div>
+    </div>
+  </header>
+
+  <section class="method">
+    <h2>How these were graded</h2>
+    <dl class="method-grid">
+      <div class="method-item">
+        <dt>Talent</dt>
+        <dd>Total value of players acquired, from consensus rank, NFL depth-chart position, and age. Rewards absolute haul, not thrift.</dd>
+      </div>
+      <div class="method-item">
+        <dt>Value over slot</dt>
+        <dd>Each player's value against what was typically available within eight picks either side. Measures whether you beat your own draft position.</dd>
+      </div>
+      <div class="method-item">
+        <dt>Impact path</dt>
+        <dd>How many drafted rookies sit at NFL depth-chart 1 or 2 — the only ones with a realistic route to 2026 snaps.</dd>
+      </div>
+      <div class="method-item">
+        <dt>Need fit</dt>
+        <dd>Pre-draft positional shortfall against a superflex lineup: two starting QBs, two RB, two WR, one TE, two flex.</dd>
+      </div>
+    </dl>
+    <p class="caveat">Two honest limits. Consensus rank compresses everything outside the top ~250 into one undifferentiated bucket, so late-round grades separate players by depth chart and age rather than by talent. And August depth charts are noisy — they shift through final cuts. Treat the top of this list as firm and the bottom as directional.</p>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom:16px;">The board</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Manager</th><th>Grade</th>
+            <th>Picks</th><th>Talent</th><th>Val/pick</th><th>Impact</th><th>Top-120</th><th>Age ≤22</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rk">1</td><td class="mgr">RayRod94</td><td class="gr"><span class="grade g-a">A</span></td><td>5</td><td>334</td><td>+5.9</td><td>2</td><td>2</td><td>2</td></tr>
+          <tr><td class="rk">2</td><td class="mgr">CarlosMalagon</td><td class="gr"><span class="grade g-a">A−</span></td><td>6</td><td>373</td><td>−3.3</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr class="is-mine"><td class="rk">3</td><td class="mgr">SmokeySupremacy<span class="you-tag">YOU</span></td><td class="gr"><span class="grade g-a">A−</span></td><td>7</td><td>355</td><td>+6.4</td><td>3</td><td>2</td><td>5</td></tr>
+          <tr><td class="rk">4</td><td class="mgr">88boyz11</td><td class="gr"><span class="grade g-a">A−</span></td><td>5</td><td>240</td><td>+5.9</td><td>1</td><td>1</td><td>3</td></tr>
+          <tr><td class="rk">5</td><td class="mgr">JoshuaR23</td><td class="gr"><span class="grade g-b">B+</span></td><td>9</td><td>412</td><td>−0.6</td><td>3</td><td>0</td><td>6</td></tr>
+          <tr><td class="rk">6</td><td class="mgr">TreyF3</td><td class="gr"><span class="grade g-b">B+</span></td><td>5</td><td>222</td><td>+3.5</td><td>2</td><td>1</td><td>2</td></tr>
+          <tr><td class="rk">7</td><td class="mgr">Zaiah2000</td><td class="gr"><span class="grade g-b">B</span></td><td>8</td><td>349</td><td>+0.1</td><td>2</td><td>0</td><td>4</td></tr>
+          <tr><td class="rk">8</td><td class="mgr">TexasTimeshifts</td><td class="gr"><span class="grade g-b">B</span></td><td>5</td><td>204</td><td>+2.0</td><td>2</td><td>0</td><td>0</td></tr>
+          <tr><td class="rk">9</td><td class="mgr">efuentesjr</td><td class="gr"><span class="grade g-b">B</span></td><td>4</td><td>173</td><td>+3.2</td><td>2</td><td>0</td><td>2</td></tr>
+          <tr><td class="rk">10</td><td class="mgr">raidersfantasy</td><td class="gr"><span class="grade g-b">B−</span></td><td>7</td><td>288</td><td>−5.1</td><td>1</td><td>1</td><td>4</td></tr>
+          <tr><td class="rk">11</td><td class="mgr">Fristoe</td><td class="gr"><span class="grade g-c">C+</span></td><td>4</td><td>101</td><td>+0.3</td><td>1</td><td>0</td><td>0</td></tr>
+          <tr><td class="rk">12</td><td class="mgr">PrimeTimeJG</td><td class="gr"><span class="grade g-c">C+</span></td><td>3</td><td>63</td><td>+2.7</td><td>1</td><td>0</td><td>0</td></tr>
+          <tr><td class="rk">13</td><td class="mgr">vick2times</td><td class="gr"><span class="grade g-c">C−</span></td><td>8</td><td>212</td><td>−5.5</td><td>0</td><td>0</td><td>4</td></tr>
+          <tr><td class="rk">14</td><td class="mgr">GerCllz</td><td class="gr"><span class="grade g-d">D+</span></td><td>2</td><td>36</td><td>−10.0</td><td>0</td><td>0</td><td>1</td></tr>
+          <tr><td class="rk">15</td><td class="mgr">JPuente1</td><td class="gr"><span class="grade g-d">D</span></td><td>1</td><td>18</td><td>+0.5</td><td>0</td><td>0</td><td>1</td></tr>
+          <tr><td class="rk">16</td><td class="mgr">NickBowens</td><td class="gr"><span class="grade g-d">D</span></td><td>1</td><td>18</td><td>+0.0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cards">
+    <h2>Team by team</h2>
+
+    <!-- 1 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">01</span>
+        <span class="card-name">RayRod94</span>
+        <span class="card-grade g-a">A</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">The cleanest draft in the league. <strong>Fernando Mendoza at 1.02</strong> is the single most valuable outcome available in a two-quarterback format — a top-40 rookie who is already his team's NFL starter, in the one position where this league forces you to start two. Makai Lemon adds a top-80 receiver, and <strong>Stribling at 2.15 was the steal of the second round</strong>. Deion Burks at 3.04 was the one genuine overpay. Three real assets from five picks with the best top-end fit in the draft.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+5.9</b></span>
+          <span class="chip">Talent <b>334</b></span>
+          <span class="chip">NFL starters <b>1</b></span>
+          <span class="chip">Top-120 <b>2</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.02</span><span class="pk-name">Fernando Mendoza <em>QB · LV · 22</em></span><span class="pk-tag starter">NFL starter · rank 39</span></div>
+          <div class="pick"><span class="pk-no">1.04</span><span class="pk-name">Makai Lemon <em>WR · PHI · 22</em></span><span class="pk-tag">rank 77</span></div>
+          <div class="pick"><span class="pk-no">2.15</span><span class="pk-name">De'Zhaun Stribling <em>WR · SF · 23</em></span><span class="pk-tag steal">steal +27.4</span></div>
+          <div class="pick"><span class="pk-no">3.04</span><span class="pk-name">Deion Burks <em>WR · IND · 23</em></span><span class="pk-tag reach">reach −20.9</span></div>
+          <div class="pick"><span class="pk-no">5.04</span><span class="pk-name">Roman Hemby <em>RB · LV · 23</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">02</span>
+        <span class="card-name">CarlosMalagon</span>
+        <span class="card-grade g-a">A−</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">The best raw talent haul in the draft and the only team to land <strong>two immediate NFL starters</strong> — Carnell Tate as his team's WR1 and Kenyon Sadiq as an outright starting tight end. Three top-120 players is a league high. What keeps it from an A: he held picks 3, 6, 9 and 19 and paid full retail at every one, posting the second-worst value-per-pick among contenders. He also entered with a genuine <strong>superflex quarterback shortfall and never addressed it</strong> across six selections.</p>
+        <div class="stat-row">
+          <span class="chip">Talent <b>373</b></span>
+          <span class="chip neg">Value/pick <b>−3.3</b></span>
+          <span class="chip pos">NFL starters <b>2</b></span>
+          <span class="chip">Top-120 <b>3</b></span>
+          <span class="chip neg">Need unmet <b>QB</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.03</span><span class="pk-name">Carnell Tate <em>WR · TEN · 21</em></span><span class="pk-tag starter">NFL starter · rank 61</span></div>
+          <div class="pick"><span class="pk-no">1.06</span><span class="pk-name">Kenyon Sadiq <em>TE · NYJ · 21</em></span><span class="pk-tag starter">NFL starter · rank 109</span></div>
+          <div class="pick"><span class="pk-no">1.09</span><span class="pk-name">Jonah Coleman <em>RB · DEN · 22</em></span><span class="pk-tag">rank 118</span></div>
+          <div class="pick"><span class="pk-no">2.03</span><span class="pk-name">Malachi Fields <em>WR · NYG · 22</em></span><span class="pk-tag reach">buried · WR6</span></div>
+          <div class="pick"><span class="pk-no">4.03</span><span class="pk-name">Jam Miller <em>RB · NE · 25</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.03</span><span class="pk-name">Lake McRee <em>TE · PIT · 25</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card mine">
+      <div class="card-head">
+        <span class="card-rank">03</span>
+        <span class="card-name" style="color:var(--gold)">SmokeySupremacy</span>
+        <span class="card-grade g-a">A−</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">The <strong>best value-per-pick in the league</strong> and the third-largest talent haul, off seven selections — the most of any team that drafted efficiently. Jordyn Tyson and Emmett Johnson are both top-120, and Brazzell at 3.07 was the fourth-biggest value gain in the draft precisely because a season-ending knee injury scared the room off a player who costs you a year you weren't going to use. Kacmarek is the best remaining path at tight end. The honest mark against it: <strong>zero drafted rookies are NFL depth-chart starters</strong>, and Klubnik at 2.07 was the single largest reach on this board by value — a defensible bet on superflex scarcity, but a bet, and it came one pick after Kaytron Allen and Mike Washington were still there.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+6.4</b></span>
+          <span class="chip">Talent <b>355</b></span>
+          <span class="chip">Impact path <b>3</b></span>
+          <span class="chip neg">NFL starters <b>0</b></span>
+          <span class="chip pos">Age ≤22 <b>5</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.07</span><span class="pk-name">Jordyn Tyson <em>WR · NO · 21</em></span><span class="pk-tag">rank 69 · WR2</span></div>
+          <div class="pick"><span class="pk-no">1.16</span><span class="pk-name">Emmett Johnson <em>RB · KC · 22</em></span><span class="pk-tag steal">steal +15.1</span></div>
+          <div class="pick"><span class="pk-no">2.07</span><span class="pk-name">Cade Klubnik <em>QB · NYJ · 22</em></span><span class="pk-tag reach">reach −14.6</span></div>
+          <div class="pick"><span class="pk-no">3.07</span><span class="pk-name">Chris Brazzell <em>WR · CAR · 22</em></span><span class="pk-tag steal">steal +25.1 · injured</span></div>
+          <div class="pick"><span class="pk-no">3.16</span><span class="pk-name">Will Kacmarek <em>TE · MIA · 23</em></span><span class="pk-tag">TE2 · best TE path left</span></div>
+          <div class="pick"><span class="pk-no">4.07</span><span class="pk-name">Caleb Douglas <em>WR · MIA · 22</em></span><span class="pk-tag steal">+8.3</span></div>
+          <div class="pick"><span class="pk-no">5.07</span><span class="pk-name">J.M. Gyllenborg <em>TE · KC · 23</em></span><span class="pk-tag">flier · Kelce is 36</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">04</span>
+        <span class="card-name">88boyz11</span>
+        <span class="card-grade g-a">A−</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Took <strong>the best player in the draft</strong> at 1.01 and did not overthink it. Jeremiyah Love is a top-15 rookie already sitting atop an NFL depth chart — the highest-certainty asset any team walked away with. Germie Bernard at 2.09 was a solid second swing. The reason this sits fourth rather than first is everything after: two of five picks went to players without an NFL team at all, leaving the smallest talent total of any team drafting in the top half.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+5.9</b></span>
+          <span class="chip neg">Talent <b>240</b></span>
+          <span class="chip pos">Best player <b>in draft</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.01</span><span class="pk-name">Jeremiyah Love <em>RB · ARI · 21</em></span><span class="pk-tag starter">NFL starter · rank 15</span></div>
+          <div class="pick"><span class="pk-no">2.09</span><span class="pk-name">Germie Bernard <em>WR · PIT · 22</em></span><span class="pk-tag steal">steal +16.4</span></div>
+          <div class="pick"><span class="pk-no">4.09</span><span class="pk-name">Le'Veon Moss <em>RB · FA · 25</em></span><span class="pk-tag reach">no NFL team</span></div>
+          <div class="pick"><span class="pk-no">4.16</span><span class="pk-name">Jaren Kanak <em>TE · TEN · 22</em></span><span class="pk-tag">+8.1</span></div>
+          <div class="pick"><span class="pk-no">5.09</span><span class="pk-name">Dylan Devezin <em>RB · FA · 25</em></span><span class="pk-tag reach">no NFL team</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">05</span>
+        <span class="card-name">JoshuaR23</span>
+        <span class="card-grade g-b">B+</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Nine picks — the most in the league — and the <strong>largest total talent haul of anyone</strong>. Zachariah Branch and Ja'Kobi Lane in the second round were both strong value, and six players aged 22 or under is a real dynasty foundation. But the efficiency was slightly negative, and two selections did most of the damage: Carson Beck at 2.04 was a full round early for a QB ranked outside the top 400, and <strong>Oscar Delp at 2.13 was the worst single pick in the draft by value</strong>. Volume covered a lot of sins here.</p>
+        <div class="stat-row">
+          <span class="chip pos">Talent <b>412 · best</b></span>
+          <span class="chip neg">Value/pick <b>−0.6</b></span>
+          <span class="chip">Impact path <b>3</b></span>
+          <span class="chip pos">Age ≤22 <b>6</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.15</span><span class="pk-name">Denzel Boston <em>WR · CLE · 22</em></span><span class="pk-tag steal">+12.3</span></div>
+          <div class="pick"><span class="pk-no">2.02</span><span class="pk-name">Ted Hurst <em>WR · TB · 22</em></span><span class="pk-tag">rank 196</span></div>
+          <div class="pick"><span class="pk-no">2.04</span><span class="pk-name">Carson Beck <em>QB · ARI · 23</em></span><span class="pk-tag reach">reach −22.8</span></div>
+          <div class="pick"><span class="pk-no">2.05</span><span class="pk-name">Zachariah Branch <em>WR · ATL · 22</em></span><span class="pk-tag steal">steal +16.1</span></div>
+          <div class="pick"><span class="pk-no">2.12</span><span class="pk-name">Ja'Kobi Lane <em>WR · BAL · 22</em></span><span class="pk-tag steal">steal +21.1</span></div>
+          <div class="pick"><span class="pk-no">2.13</span><span class="pk-name">Oscar Delp <em>TE · NO · 22</em></span><span class="pk-tag reach">worst pick −31.5</span></div>
+          <div class="pick"><span class="pk-no">4.02</span><span class="pk-name">Justin Joly <em>TE · DEN · 22</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">4.14</span><span class="pk-name">Cyrus Allen <em>WR · KC · 23</em></span><span class="pk-tag reach">WR5 of 7</span></div>
+          <div class="pick"><span class="pk-no">5.02</span><span class="pk-name">Matt Hibner <em>TE · BAL · 24</em></span><span class="pk-tag">+8.6</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">06</span>
+        <span class="card-name">TreyF3</span>
+        <span class="card-grade g-b">B+</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Quietly efficient. <strong>Mike Washington at 2.10 was the single biggest value gain in the entire draft</strong> — a top-140 back who slid nearly a full round and landed as an NFL RB2. KC Concepcion is a legitimate top-120 receiver. The back half is filler, and only two players came in at 22 or younger, which caps the dynasty upside. But nothing here was wasted.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+3.5</b></span>
+          <span class="chip">Talent <b>222</b></span>
+          <span class="chip pos">Biggest steal <b>in draft</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.10</span><span class="pk-name">KC Concepcion <em>WR · CLE · 21</em></span><span class="pk-tag">rank 116 · WR2</span></div>
+          <div class="pick"><span class="pk-no">2.10</span><span class="pk-name">Mike Washington <em>RB · LV · 23</em></span><span class="pk-tag steal">steal +30.8 · best</span></div>
+          <div class="pick"><span class="pk-no">3.10</span><span class="pk-name">J'Mari Taylor <em>RB · JAX · 24</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">4.10</span><span class="pk-name">Zavion Thomas <em>WR · CHI · 22</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.10</span><span class="pk-name">Malik Benson <em>WR · LV · 23</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">07</span>
+        <span class="card-name">Zaiah2000</span>
+        <span class="card-grade g-b">B</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Eight picks, fourth-most talent, and dead-even on value — a broad, unspectacular haul. <strong>Demond Claiborne at the end of round two was excellent value</strong>, and Eli Stowers gives him a tight end with a real path. The problem is concentration: three of the first four picks went to receivers buried at WR4, WR5 and WR6 on their NFL depth charts, and like CarlosMalagon he entered with a <strong>superflex QB shortfall and drafted no quarterback at all</strong>.</p>
+        <div class="stat-row">
+          <span class="chip">Talent <b>349</b></span>
+          <span class="chip">Value/pick <b>+0.1</b></span>
+          <span class="chip neg">Need unmet <b>QB</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.08</span><span class="pk-name">Eli Stowers <em>TE · PHI · 23</em></span><span class="pk-tag">rank 140 · TE2</span></div>
+          <div class="pick"><span class="pk-no">2.01</span><span class="pk-name">Elijah Sarratt <em>WR · BAL · 23</em></span><span class="pk-tag reach">−15.1</span></div>
+          <div class="pick"><span class="pk-no">2.08</span><span class="pk-name">Chris Bell <em>WR · MIA · 22</em></span><span class="pk-tag">rank 203</span></div>
+          <div class="pick"><span class="pk-no">2.16</span><span class="pk-name">Demond Claiborne <em>RB · MIN · 22</em></span><span class="pk-tag steal">steal +25.3</span></div>
+          <div class="pick"><span class="pk-no">3.08</span><span class="pk-name">Eli Raridon <em>TE · NE · 22</em></span><span class="pk-tag">TE2</span></div>
+          <div class="pick"><span class="pk-no">4.08</span><span class="pk-name">Seth McGowan <em>RB · IND · 24</em></span><span class="pk-tag">behind Jonathan Taylor</span></div>
+          <div class="pick"><span class="pk-no">4.15</span><span class="pk-name">Josh Cameron <em>WR · JAX · 23</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.08</span><span class="pk-name">Noah Thomas <em>WR · CIN · 22</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">08</span>
+        <span class="card-name">TexasTimeshifts</span>
+        <span class="card-grade g-b">B</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Sensible and slightly positive throughout. Ty Simpson was the second quarterback off the board in a format that rewards exactly that, Kaytron Allen was fair value, and <strong>Bauer Sharp in the fifth round was the best late tight end swing anyone made</strong> — a TE2 behind an unspectacular starter. The flaw is age: <strong>not one player drafted was 22 or younger</strong>, the only team in the league that can say so. In dynasty that's a real cost.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+2.0</b></span>
+          <span class="chip">Talent <b>204</b></span>
+          <span class="chip neg">Age ≤22 <b>0 · worst</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.11</span><span class="pk-name">Ty Simpson <em>QB · LAR · 23</em></span><span class="pk-tag">rank 141</span></div>
+          <div class="pick"><span class="pk-no">2.11</span><span class="pk-name">Kaytron Allen <em>RB · WAS · 23</em></span><span class="pk-tag steal">+9.6</span></div>
+          <div class="pick"><span class="pk-no">3.11</span><span class="pk-name">Bryce Lance <em>WR · NO · 23</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">4.11</span><span class="pk-name">Robert Henry <em>RB · WAS · 24</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.11</span><span class="pk-name">Bauer Sharp <em>TE · TB · 23</em></span><span class="pk-tag steal">+10.1 · TE2</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">09</span>
+        <span class="card-name">efuentesjr</span>
+        <span class="card-grade g-b">B</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Only four picks and he made them count, finishing positive on value with two rookies sitting at NFL depth-chart two. Antonio Williams is the anchor. The strategy was unusually narrow — <strong>three of four picks were tight ends</strong> — which is a defensible corner to attack in a league where the position is scarce, but it means a small draft got even narrower. Boerkircher in the fifth was smart, cheap depth.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+3.2</b></span>
+          <span class="chip">Picks <b>4</b></span>
+          <span class="chip">Impact path <b>2</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.14</span><span class="pk-name">Antonio Williams <em>WR · WAS · 22</em></span><span class="pk-tag">rank 156 · WR2</span></div>
+          <div class="pick"><span class="pk-no">2.14</span><span class="pk-name">Max Klare <em>TE · LAR · 23</em></span><span class="pk-tag steal">+7.2</span></div>
+          <div class="pick"><span class="pk-no">3.14</span><span class="pk-name">Jack Endries <em>TE · CIN · 22</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.14</span><span class="pk-name">Nate Boerkircher <em>TE · JAX · 24</em></span><span class="pk-tag">+6.3 · TE2</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">10</span>
+        <span class="card-name">raidersfantasy</span>
+        <span class="card-grade g-b">B−</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">A tale of two drafts. <strong>Jadarian Price at 1.05 was close to perfect</strong> — a top-65 back who is already an NFL starter, landing on the one roster in the league with a genuine running back shortfall. Omar Cooper was fine. Then it fell apart: <strong>Drew Allar at 2.06 was the worst pick in the draft by value</strong>, an unranked quarterback taken more than a round early, and Koziol at 3.05 compounded it. Seven picks produced the third-worst efficiency in the league.</p>
+        <div class="stat-row">
+          <span class="chip pos">Need met <b>RB</b></span>
+          <span class="chip neg">Value/pick <b>−5.1</b></span>
+          <span class="chip neg">Worst pick <b>in draft</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.05</span><span class="pk-name">Jadarian Price <em>RB · SEA · 22</em></span><span class="pk-tag starter">NFL starter · rank 63</span></div>
+          <div class="pick"><span class="pk-no">1.12</span><span class="pk-name">Omar Cooper <em>WR · NYJ · 22</em></span><span class="pk-tag">rank 146</span></div>
+          <div class="pick"><span class="pk-no">2.06</span><span class="pk-name">Drew Allar <em>QB · PIT · 22</em></span><span class="pk-tag reach">worst value −36.8</span></div>
+          <div class="pick"><span class="pk-no">3.05</span><span class="pk-name">Tanner Koziol <em>TE · JAX · 22</em></span><span class="pk-tag reach">−15.3</span></div>
+          <div class="pick"><span class="pk-no">4.05</span><span class="pk-name">Taylen Green <em>QB · CLE · 23</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">4.12</span><span class="pk-name">Aaron Anderson <em>WR · CLE · 23</em></span><span class="pk-tag">flier</span></div>
+          <div class="pick"><span class="pk-no">5.05</span><span class="pk-name">Eric Rivers <em>WR · TB · 23</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">11</span>
+        <span class="card-name">Fristoe</span>
+        <span class="card-grade g-c">C+</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">One good pick and three that will not matter. <strong>Michael Trigg at 3.02 was strong value</strong> — the last tight end on the board with a meaningful rank, landing as a TE2. After that: three receivers sitting fifth, sixth and eighth on their NFL depth charts, none of them under 23. With no first-round capital there was a ceiling here, but the late picks were spent on the wrong profile.</p>
+        <div class="stat-row">
+          <span class="chip">Value/pick <b>+0.3</b></span>
+          <span class="chip neg">Talent <b>101</b></span>
+          <span class="chip neg">Age ≤22 <b>0</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">3.02</span><span class="pk-name">Michael Trigg <em>TE · DAL · 24</em></span><span class="pk-tag steal">steal +19.5</span></div>
+          <div class="pick"><span class="pk-no">3.15</span><span class="pk-name">CJ Daniels <em>WR · LAR · 24</em></span><span class="pk-tag reach">WR6</span></div>
+          <div class="pick"><span class="pk-no">4.04</span><span class="pk-name">Trebor Pena <em>WR · JAX · 24</em></span><span class="pk-tag">WR5</span></div>
+          <div class="pick"><span class="pk-no">5.12</span><span class="pk-name">Emmanuel Henderson <em>WR · SEA · 23</em></span><span class="pk-tag">WR8</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 12 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">12</span>
+        <span class="card-name">PrimeTimeJG</span>
+        <span class="card-grade g-c">C+</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Three picks, none before the third round, and he still finished positive on value — which is the whole grade. <strong>Marlin Klein and Eli Heidenreich were two of the better late-round paths available</strong>: a TE2 behind an aging starter, and a back sitting third behind two runners on the wrong side of 27. Nothing here moves a lineup in 2026, but nothing was wasted either. Graded on process, this is a fine small draft.</p>
+        <div class="stat-row">
+          <span class="chip pos">Value/pick <b>+2.7</b></span>
+          <span class="chip neg">Picks <b>3</b></span>
+          <span class="chip">Talent <b>63</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">3.13</span><span class="pk-name">Marlin Klein <em>TE · HOU · 23</em></span><span class="pk-tag">+5.1 · TE2</span></div>
+          <div class="pick"><span class="pk-no">4.06</span><span class="pk-name">Eli Heidenreich <em>RB · PIT · 23</em></span><span class="pk-tag">+5.1 · best RB path</span></div>
+          <div class="pick"><span class="pk-no">5.06</span><span class="pk-name">Jeff Caldwell <em>WR · KC · 23</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 13 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">13</span>
+        <span class="card-name">vick2times</span>
+        <span class="card-grade g-c">C−</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Eight picks and almost nothing to show for them — the <strong>worst value-per-pick in the league</strong> and the only team with eight or more selections to draft <em>zero</em> players with an NFL depth-chart path. Nicholas Singleton is the lone real asset, and even he sits third on his depth chart. Skyler Bell at 3.01 and Brenen Thompson at 3.06 were both massive overpays for unranked receivers. Nussmeier in the third was the one genuinely good call. Four players aged 22 or under keeps this off the floor.</p>
+        <div class="stat-row">
+          <span class="chip neg">Value/pick <b>−5.5 · worst</b></span>
+          <span class="chip neg">Impact path <b>0</b></span>
+          <span class="chip">Picks <b>8</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">1.13</span><span class="pk-name">Nicholas Singleton <em>RB · TEN · 22</em></span><span class="pk-tag">rank 167</span></div>
+          <div class="pick"><span class="pk-no">3.01</span><span class="pk-name">Skyler Bell <em>WR · BUF · 24</em></span><span class="pk-tag reach">reach −33.6</span></div>
+          <div class="pick"><span class="pk-no">3.06</span><span class="pk-name">Brenen Thompson <em>WR · LAC · 23</em></span><span class="pk-tag reach">reach −18.3</span></div>
+          <div class="pick"><span class="pk-no">3.09</span><span class="pk-name">Garrett Nussmeier <em>QB · KC · 24</em></span><span class="pk-tag steal">+13.5</span></div>
+          <div class="pick"><span class="pk-no">3.12</span><span class="pk-name">Adam Randall <em>RB · BAL · 22</em></span><span class="pk-tag">+2.4</span></div>
+          <div class="pick"><span class="pk-no">4.01</span><span class="pk-name">Kevin Coleman <em>WR · MIA · 22</em></span><span class="pk-tag reach">WR7</span></div>
+          <div class="pick"><span class="pk-no">4.13</span><span class="pk-name">Dane Key <em>WR · DEN · 23</em></span><span class="pk-tag">WR7</span></div>
+          <div class="pick"><span class="pk-no">5.01</span><span class="pk-name">CJ Donaldson <em>RB · NO · 22</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 14 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">14</span>
+        <span class="card-name">GerCllz</span>
+        <span class="card-grade g-d">D+</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">Two picks, and the first one was the problem. <strong>Kaelon Black at 3.03 cost more than two full rounds of value</strong> — an unranked, 24-year-old back taken while Trigg, Brazzell and Stribling were still on the board. Reggie Virgil with the final pick of the draft is a fine age-22 dart. There was little capital to work with here, which is why this isn't lower, but the one meaningful pick was misspent.</p>
+        <div class="stat-row">
+          <span class="chip neg">Value/pick <b>−10.0</b></span>
+          <span class="chip neg">Talent <b>36</b></span>
+          <span class="chip">Picks <b>2</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">3.03</span><span class="pk-name">Kaelon Black <em>RB · SF · 24</em></span><span class="pk-tag reach">reach −20.2</span></div>
+          <div class="pick"><span class="pk-no">5.16</span><span class="pk-name">Reggie Virgil <em>WR · ARI · 22</em></span><span class="pk-tag">final pick · flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 15 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">15</span>
+        <span class="card-name">JPuente1</span>
+        <span class="card-grade g-d">D</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">One pick, at 5.13, and it was a reasonable one — Dean Connors is 22 with a roster spot. There is simply nothing to grade. <strong>This measures the draft, not the team:</strong> trading rookie capital for proven players is a legitimate strategy, and if those trades brought back starters, this D is meaningless. On draft-day haul alone, though, he was a spectator.</p>
+        <div class="stat-row">
+          <span class="chip">Value/pick <b>+0.5</b></span>
+          <span class="chip neg">Picks <b>1</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">5.13</span><span class="pk-name">Dean Connors <em>RB · LAR · 22</em></span><span class="pk-tag">flier</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 16 -->
+    <article class="card">
+      <div class="card-head">
+        <span class="card-rank">16</span>
+        <span class="card-name">NickBowens</span>
+        <span class="card-grade g-d">D</span>
+      </div>
+      <div class="card-body">
+        <p class="verdict">One pick, at 5.15, spent on a 24-year-old third-string quarterback. Dead last by haul with the same caveat as above — <strong>a one-pick draft usually reflects trades made months ago, not decisions made tonight.</strong> Judge the roster, not this page.</p>
+        <div class="stat-row">
+          <span class="chip">Value/pick <b>0.0</b></span>
+          <span class="chip neg">Picks <b>1</b></span>
+        </div>
+        <div class="picks">
+          <div class="pick"><span class="pk-no">5.15</span><span class="pk-name">Behren Morton <em>QB · NE · 24</em></span><span class="pk-tag">QB3</span></div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>
+    <div>MFFL · 2026 dynasty superflex rookie draft · 80 picks · graded from live Sleeper draft, roster and depth-chart data.</div>
+    <div>Value figures are model output, not scouting. Consensus rank flattens everything past the top 250, and August depth charts move through final cuts — the top of this board is far firmer than the bottom.</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
