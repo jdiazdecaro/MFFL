@@ -248,19 +248,6 @@
     white-space: nowrap;
   }
   td.gr { text-align: left; width: 54px; }
-  tbody tr.is-mine { background: color-mix(in srgb, var(--gold) 9%, transparent); }
-  tbody tr.is-mine td.mgr { color: var(--gold); }
-  .you-tag {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: .1em;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    padding: 1px 5px;
-    border-radius: 2px;
-    margin-left: 8px;
-    vertical-align: 1px;
-  }
 
   .grade {
     font-family: var(--serif);
@@ -282,7 +269,6 @@
     box-shadow: var(--shadow);
     overflow: hidden;
   }
-  .card.mine { border-color: var(--gold); }
   .card-head {
     display: flex;
     align-items: baseline;
@@ -427,7 +413,7 @@
         <tbody>
           <tr><td class="rk">1</td><td class="mgr">RayRod94</td><td class="gr"><span class="grade g-a">A</span></td><td>5</td><td>334</td><td>+5.9</td><td>2</td><td>2</td><td>2</td></tr>
           <tr><td class="rk">2</td><td class="mgr">CarlosMalagon</td><td class="gr"><span class="grade g-a">A−</span></td><td>6</td><td>373</td><td>−3.3</td><td>2</td><td>3</td><td>4</td></tr>
-          <tr class="is-mine"><td class="rk">3</td><td class="mgr">SmokeySupremacy<span class="you-tag">YOU</span></td><td class="gr"><span class="grade g-a">A−</span></td><td>7</td><td>355</td><td>+6.4</td><td>3</td><td>2</td><td>5</td></tr>
+          <tr><td class="rk">3</td><td class="mgr">SmokeySupremacy</td><td class="gr"><span class="grade g-a">A−</span></td><td>7</td><td>355</td><td>+6.4</td><td>3</td><td>2</td><td>5</td></tr>
           <tr><td class="rk">4</td><td class="mgr">88boyz11</td><td class="gr"><span class="grade g-a">A−</span></td><td>5</td><td>240</td><td>+5.9</td><td>1</td><td>1</td><td>3</td></tr>
           <tr><td class="rk">5</td><td class="mgr">JoshuaR23</td><td class="gr"><span class="grade g-b">B+</span></td><td>9</td><td>412</td><td>−0.6</td><td>3</td><td>0</td><td>6</td></tr>
           <tr><td class="rk">6</td><td class="mgr">TreyF3</td><td class="gr"><span class="grade g-b">B+</span></td><td>5</td><td>222</td><td>+3.5</td><td>2</td><td>1</td><td>2</td></tr>
@@ -502,10 +488,10 @@
     </article>
 
     <!-- 3 -->
-    <article class="card mine">
+    <article class="card">
       <div class="card-head">
         <span class="card-rank">03</span>
-        <span class="card-name" style="color:var(--gold)">SmokeySupremacy</span>
+        <span class="card-name">SmokeySupremacy</span>
         <span class="card-grade g-a">A−</span>
       </div>
       <div class="card-body">
@@ -561,7 +547,7 @@
         <span class="card-grade g-b">B+</span>
       </div>
       <div class="card-body">
-        <p class="verdict">Nine picks — the most in the league — and the <strong>largest total talent haul of anyone</strong>. Zachariah Branch and Ja'Kobi Lane in the second round were both strong value, and six players aged 22 or under is a real dynasty foundation. But the efficiency was slightly negative, and two selections did most of the damage: Carson Beck at 2.04 was a full round early for a QB ranked outside the top 400, and <strong>Oscar Delp at 2.13 was the worst single pick in the draft by value</strong>. Volume covered a lot of sins here.</p>
+        <p class="verdict">Nine picks — the most in the league — and the <strong>largest total talent haul of anyone</strong>. Zachariah Branch and Ja'Kobi Lane in the second round were both strong value, and six players aged 22 or under is a real dynasty foundation. But the efficiency was slightly negative, and two selections did most of the damage: Carson Beck at 2.04 was a full round early for a QB ranked outside the top 400, and <strong>Oscar Delp at 2.13 was the steepest single reach by value</strong>. Volume covered a lot of sins here.</p>
         <div class="stat-row">
           <span class="chip pos">Talent <b>412 · best</b></span>
           <span class="chip neg">Value/pick <b>−0.6</b></span>
@@ -574,7 +560,7 @@
           <div class="pick"><span class="pk-no">2.04</span><span class="pk-name">Carson Beck <em>QB · ARI · 23</em></span><span class="pk-tag reach">reach −22.8</span></div>
           <div class="pick"><span class="pk-no">2.05</span><span class="pk-name">Zachariah Branch <em>WR · ATL · 22</em></span><span class="pk-tag steal">steal +16.1</span></div>
           <div class="pick"><span class="pk-no">2.12</span><span class="pk-name">Ja'Kobi Lane <em>WR · BAL · 22</em></span><span class="pk-tag steal">steal +21.1</span></div>
-          <div class="pick"><span class="pk-no">2.13</span><span class="pk-name">Oscar Delp <em>TE · NO · 22</em></span><span class="pk-tag reach">worst pick −31.5</span></div>
+          <div class="pick"><span class="pk-no">2.13</span><span class="pk-name">Oscar Delp <em>TE · NO · 22</em></span><span class="pk-tag reach">reach −31.5</span></div>
           <div class="pick"><span class="pk-no">4.02</span><span class="pk-name">Justin Joly <em>TE · DEN · 22</em></span><span class="pk-tag">flier</span></div>
           <div class="pick"><span class="pk-no">4.14</span><span class="pk-name">Cyrus Allen <em>WR · KC · 23</em></span><span class="pk-tag reach">WR5 of 7</span></div>
           <div class="pick"><span class="pk-no">5.02</span><span class="pk-name">Matt Hibner <em>TE · BAL · 24</em></span><span class="pk-tag">+8.6</span></div>
@@ -688,16 +674,16 @@
         <span class="card-grade g-b">B−</span>
       </div>
       <div class="card-body">
-        <p class="verdict">A tale of two drafts. <strong>Jadarian Price at 1.05 was close to perfect</strong> — a top-65 back who is already an NFL starter, landing on the one roster in the league with a genuine running back shortfall. Omar Cooper was fine. Then it fell apart: <strong>Drew Allar at 2.06 was the worst pick in the draft by value</strong>, an unranked quarterback taken more than a round early, and Koziol at 3.05 compounded it. Seven picks produced the third-worst efficiency in the league.</p>
+        <p class="verdict">A tale of two drafts. <strong>Jadarian Price at 1.05 was close to perfect</strong> — a top-65 back who is already an NFL starter, landing on the one roster in the league with a genuine running back shortfall. Omar Cooper was fine. The middle rounds got aggressive: <strong>Drew Allar at 2.06 carried the steepest cost against the board</strong>, an unranked quarterback taken about a round ahead of his market, with Koziol at 3.05 in similar territory. Both are real upside bets in a format that rewards quarterback depth — they just came at a premium, and seven picks landed him third-lowest in value per pick.</p>
         <div class="stat-row">
           <span class="chip pos">Need met <b>RB</b></span>
           <span class="chip neg">Value/pick <b>−5.1</b></span>
-          <span class="chip neg">Worst pick <b>in draft</b></span>
+          <span class="chip neg">Steepest reach <b>−36.8</b></span>
         </div>
         <div class="picks">
           <div class="pick"><span class="pk-no">1.05</span><span class="pk-name">Jadarian Price <em>RB · SEA · 22</em></span><span class="pk-tag starter">NFL starter · rank 63</span></div>
           <div class="pick"><span class="pk-no">1.12</span><span class="pk-name">Omar Cooper <em>WR · NYJ · 22</em></span><span class="pk-tag">rank 146</span></div>
-          <div class="pick"><span class="pk-no">2.06</span><span class="pk-name">Drew Allar <em>QB · PIT · 22</em></span><span class="pk-tag reach">worst value −36.8</span></div>
+          <div class="pick"><span class="pk-no">2.06</span><span class="pk-name">Drew Allar <em>QB · PIT · 22</em></span><span class="pk-tag reach">reach −36.8</span></div>
           <div class="pick"><span class="pk-no">3.05</span><span class="pk-name">Tanner Koziol <em>TE · JAX · 22</em></span><span class="pk-tag reach">−15.3</span></div>
           <div class="pick"><span class="pk-no">4.05</span><span class="pk-name">Taylen Green <em>QB · CLE · 23</em></span><span class="pk-tag">flier</span></div>
           <div class="pick"><span class="pk-no">4.12</span><span class="pk-name">Aaron Anderson <em>WR · CLE · 23</em></span><span class="pk-tag">flier</span></div>
