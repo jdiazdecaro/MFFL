@@ -141,12 +141,55 @@
   footer { border-top: 1px solid var(--rule); padding-top: 16px;
            font-size: .83rem; color: var(--ink-3); }
 
-  @media (max-width: 560px) {
+  /* tablet / small laptop: tighten columns before anything wraps */
+  @media (max-width: 900px) {
+    .wrap { padding: 32px 16px 72px; }
+    .row, .hrow { grid-template-columns: 22px 1fr 124px 58px 108px 84px; gap: 10px; padding-left: 14px; padding-right: 14px; }
+    .seg { font-size: 11px; }
+    .cell { font-size: .7rem; }
+    .cell b { font-size: .79rem; }
+  }
+
+  /* phone: each team becomes a labelled card */
+  @media (max-width: 640px) {
+    .wrap { padding: 26px 14px 64px; gap: 26px; }
     .hrow { display: none; }
-    .split-k { display: flex; }
-    .row { grid-template-columns: 24px 1fr 64px; row-gap: 9px; padding: 12px 14px; }
-    .cell { grid-column: 2 / -1; text-align: left !important; }
+    .brand img { width: 60px; height: 60px; }
+    .brand { gap: 14px; }
+    .tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tabs a { white-space: nowrap; padding: 10px 13px; }
+
+    .row { grid-template-columns: 22px 1fr auto; row-gap: 11px; gap: 10px; padding: 15px 14px; align-items: baseline; }
+    .rk  { grid-column: 1; }
+    .nm  { grid-column: 2; font-size: 1rem; }
+    .sos { grid-column: 3; }
+    .sos b { font-size: 1.15rem; }
+
     .split { grid-column: 1 / -1; }
+    .split-bar { height: 30px; }
+    .seg { font-size: 13px; }
+    .split-k { display: flex; }
+
+    .cell { grid-column: 1 / -1; display: flex; align-items: baseline;
+            justify-content: space-between; gap: 12px; text-align: right;
+            padding-top: 9px; border-top: 1px dotted var(--rule); font-size: .76rem; }
+    .cell::before { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em;
+                    text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+    .cell.tough::before { content: "Toughest week"; }
+    .cell.bye::before   { content: "Bye-week dip"; }
+    .cell .v { display: flex; align-items: baseline; gap: 7px; flex-wrap: wrap;
+               justify-content: flex-end; }
+    .cell b { display: inline; font-size: .86rem; }
+
+    .panel { padding: 16px 16px; }
+    .scale { font-size: 10px; gap: 8px 14px; }
+  }
+
+  @media (max-width: 380px) {
+    .cell::before { font-size: 9px; }
+    .cell .v { font-size: .74rem; }
+    .nm small { font-size: .72rem; }
   }
 </style>
 
@@ -191,8 +234,8 @@
         <i class="seg" style="background:var(--easy)">108.5</i><i class="seg" style="background:var(--easy)">111.8</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>110.1</b><small>easiest</small></span>
-      <span class="cell"><b>wk 14 · 15%</b>vs TexasTimeshifts</span>
-      <span class="cell severe"><b>wk 14</b>−31 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 14 · 15%</b>vs TexasTimeshifts</span></span>
+      <span class="cell bye severe"><span class="v"><b>wk 14</b>−31 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">2</span>
@@ -201,8 +244,8 @@
         <i class="seg" style="background:var(--hard)">120.9</i><i class="seg" style="background:var(--easy)">102.0</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>111.4</b><small>-18.9</small></span>
-      <span class="cell"><b>wk 5 · 26%</b>vs NickBowens</span>
-      <span class="cell"><b>wk 5</b>−15 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 5 · 26%</b>vs NickBowens</span></span>
+      <span class="cell bye"><span class="v"><b>wk 5</b>−15 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">3</span>
@@ -211,8 +254,8 @@
         <i class="seg" style="background:var(--easy)">111.4</i><i class="seg" style="background:var(--easy)">112.5</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>112.0</b><small></small></span>
-      <span class="cell severe"><b>wk 9 · 14%</b>vs Fristoe</span>
-      <span class="cell"><b>wk 6</b>−18 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 9 · 14%</b>vs Fristoe</span></span>
+      <span class="cell bye"><span class="v"><b>wk 6</b>−18 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">4</span>
@@ -221,8 +264,8 @@
         <i class="seg" style="background:var(--easy)">106.9</i><i class="seg" style="background:var(--hard)">118.6</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>112.7</b><small>+11.6</small></span>
-      <span class="cell severe"><b>wk 11 · 8%</b>vs Fristoe</span>
-      <span class="cell"><b>wk 11</b>−22 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 11 · 8%</b>vs Fristoe</span></span>
+      <span class="cell bye"><span class="v"><b>wk 11</b>−22 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">5</span>
@@ -231,8 +274,8 @@
         <i class="seg" style="background:var(--easy)">113.7</i><i class="seg" style="background:var(--easy)">112.3</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>113.0</b><small></small></span>
-      <span class="cell severe"><b>wk 14 · 2%</b>vs JPuente1</span>
-      <span class="cell"><b>wk 8</b>−13 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 14 · 2%</b>vs JPuente1</span></span>
+      <span class="cell bye"><span class="v"><b>wk 8</b>−13 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">6</span>
@@ -241,8 +284,8 @@
         <i class="seg" style="background:var(--easy)">113.9</i><i class="seg" style="background:var(--easy)">113.3</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>113.6</b><small></small></span>
-      <span class="cell severe"><b>wk 13 · 10%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 13</b>−8 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 13 · 10%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 13</b>−8 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">7</span>
@@ -251,8 +294,8 @@
         <i class="seg" style="background:var(--hard)">118.0</i><i class="seg" style="background:var(--easy)">109.3</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>113.6</b><small>-8.7</small></span>
-      <span class="cell severe"><b>wk 8 · 13%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 7</b>−9 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 8 · 13%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 7</b>−9 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">8</span>
@@ -261,8 +304,8 @@
         <i class="seg" style="background:var(--hard)">122.4</i><i class="seg" style="background:var(--easy)">106.1</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>114.3</b><small>-16.3</small></span>
-      <span class="cell"><b>wk 14 · 21%</b>vs PrimeTimeJG</span>
-      <span class="cell severe"><b>wk 11</b>−27 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 14 · 21%</b>vs PrimeTimeJG</span></span>
+      <span class="cell bye severe"><span class="v"><b>wk 11</b>−27 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">9</span>
@@ -271,8 +314,8 @@
         <i class="seg" style="background:var(--hard)">118.0</i><i class="seg" style="background:var(--easy)">114.2</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>116.1</b><small></small></span>
-      <span class="cell"><b>wk 12 · 40%</b>vs GerCllz</span>
-      <span class="cell severe"><b>wk 11</b>−34 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 12 · 40%</b>vs GerCllz</span></span>
+      <span class="cell bye severe"><span class="v"><b>wk 11</b>−34 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">10</span>
@@ -281,8 +324,8 @@
         <i class="seg" style="background:var(--hard)">120.4</i><i class="seg" style="background:var(--easy)">112.1</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>116.2</b><small>-8.4</small></span>
-      <span class="cell"><b>wk 4 · 45%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 10</b>−8 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 4 · 45%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 10</b>−8 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">11</span>
@@ -291,8 +334,8 @@
         <i class="seg" style="background:var(--hard)">116.1</i><i class="seg" style="background:var(--hard)">117.7</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>116.9</b><small></small></span>
-      <span class="cell"><b>wk 10 · 40%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 5</b>−16 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 10 · 40%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 5</b>−16 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">12</span>
@@ -301,8 +344,8 @@
         <i class="seg" style="background:var(--hard)">124.3</i><i class="seg" style="background:var(--easy)">112.2</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>118.3</b><small>-12.1</small></span>
-      <span class="cell severe"><b>wk 14 · 1%</b>vs Fristoe</span>
-      <span class="cell"><b>wk 14</b>−9 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 14 · 1%</b>vs Fristoe</span></span>
+      <span class="cell bye"><span class="v"><b>wk 14</b>−9 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">13</span>
@@ -311,8 +354,8 @@
         <i class="seg" style="background:var(--easy)">109.3</i><i class="seg" style="background:var(--hard)">128.8</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>119.1</b><small>+19.5</small></span>
-      <span class="cell severe"><b>wk 9 · 13%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 10</b>−17 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 9 · 13%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 10</b>−17 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">14</span>
@@ -321,8 +364,8 @@
         <i class="seg" style="background:var(--hard)">121.9</i><i class="seg" style="background:var(--hard)">117.7</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>119.8</b><small>-4.2</small></span>
-      <span class="cell"><b>wk 6 · 18%</b>vs GerCllz</span>
-      <span class="cell"><b>wk 11</b>−16 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 6 · 18%</b>vs GerCllz</span></span>
+      <span class="cell bye"><span class="v"><b>wk 11</b>−16 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">15</span>
@@ -331,8 +374,8 @@
         <i class="seg" style="background:var(--hard)">120.5</i><i class="seg" style="background:var(--hard)">120.0</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>120.3</b><small></small></span>
-      <span class="cell severe"><b>wk 8 · 10%</b>vs 88boyz11</span>
-      <span class="cell"><b>wk 8</b>−22 pts</span>
+      <span class="cell tough severe"><span class="v"><b>wk 8 · 10%</b>vs 88boyz11</span></span>
+      <span class="cell bye"><span class="v"><b>wk 8</b>−22 pts</span></span>
     </div>
     <div class="row">
       <span class="rk">16</span>
@@ -341,8 +384,8 @@
         <i class="seg" style="background:var(--hard)">125.8</i><i class="seg" style="background:var(--hard)">116.9</i>
       </span><span class="split-k"><span>wk 1–7</span><span>wk 8–14</span></span></span>
       <span class="sos"><b>121.3</b><small>hardest</small></span>
-      <span class="cell"><b>wk 7 · 40%</b>vs Fristoe</span>
-      <span class="cell severe"><b>wk 7</b>−32 pts</span>
+      <span class="cell tough"><span class="v"><b>wk 7 · 40%</b>vs Fristoe</span></span>
+      <span class="cell bye severe"><span class="v"><b>wk 7</b>−32 pts</span></span>
     </div>
 
   </div>
