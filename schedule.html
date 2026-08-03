@@ -64,6 +64,16 @@
   .dek { font-size: 1.02rem; color: var(--ink-2); max-width: 60ch; text-wrap: pretty; }
   h2 { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; margin: 0 0 12px; }
 
+  .asof { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap;
+          background: var(--panel); border: 1px solid var(--rule);
+          border-left: 3px solid var(--accent); border-radius: 3px;
+          padding: 13px 16px; font-size: .87rem; color: var(--ink-2); }
+  .asof b { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--accent); white-space: nowrap;
+            padding-top: 3px; }
+  .asof span { flex: 1 1 320px; }
+  .asof em { font-style: normal; color: var(--ink); font-weight: 600; }
+
   .scale { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
            font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em;
            text-transform: uppercase; color: var(--ink-3); }
@@ -209,6 +219,11 @@
     <p class="dek">Every team's fourteen opponents, ranked easiest to hardest by their average projected score. League average is 115.6 points per week.</p>
     </div>
   </header>
+
+  <p class="asof">
+    <b>Snapshot</b>
+    <span>Current as of <em>August 2, 2026</em> — built from rosters as they stand today and Sleeper's weekly 2026 projections. Trades, waiver moves, injuries and depth-chart changes after this date are not reflected, and the NFL season has not yet started.</span>
+  </p>
 
   <div class="scale">
     <span><i style="background:var(--easy)"></i>Opponents below league avg (easier)</span>
@@ -431,7 +446,7 @@
   </section>
 
   <footer>
-    MFFL 2026 · 16 teams · 2QB superflex · weeks 1–14 regular season. Opponent scores are projected from current rosters, Sleeper weekly projections, and four years of manager lineup efficiency.
+    MFFL 2026 · 16 teams · 2QB superflex · weeks 1–14 regular season. Opponent scores are projected from rosters as of <strong>August 2, 2026</strong>, Sleeper weekly projections, and four seasons (2022–2025) of measured manager lineup efficiency. Figures are model output, not scouting.
   </footer>
 
 </div>
