@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Five seasons of MFFL trade history: which month the league actually trades in, and the two events that drive it.">
+<meta name="description" content="Five seasons of MFFL trade history: who deals, which positions and picks change hands, and when the league actually trades.">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -229,7 +229,7 @@
     <div class="brand-txt">
     <div class="eyebrow">MFFL · 2022–2026 · 156 trades</div>
     <h1>Trade History</h1>
-    <p class="dek">Five seasons of completed trades, month by month — which month the league actually does business in, and the two events that really drive it.</p>
+    <p class="dek">Five seasons of completed trades — who deals, what changes hands, and when the league actually does business.</p>
     </div>
   </header>
 
@@ -239,7 +239,112 @@
   </p>
 
   <section>
-    <h2>August, by a single trade</h2>
+    <h2>Who trades</h2>
+    <p class="dek" style="margin-bottom:16px">Trade counts are keyed on manager account, not roster slot — roster IDs are only stable within a season, so counting them directly would scramble five years of history. Every manager in the league has made at least one trade.</p>
+
+    <div class="fig">
+      <h3>Five most active managers, 2022–2026</h3>
+      <p class="sub">A manager is counted once per trade they were part of. "Sent" counts assets leaving that roster. This is the top five by volume; the other 12 accounts across the five seasons are not listed.</p>
+      <div class="mx">
+        <table class="wide">
+          <thead><tr>
+            <th scope="col">Manager</th><th scope="col"></th><th scope="col">Trades</th>
+            <th scope="col">Seasons</th><th scope="col">Per&nbsp;season</th>
+            <th scope="col">Players&nbsp;sent</th><th scope="col">Picks&nbsp;sent</th><th scope="col">%&nbsp;picks</th>
+          </tr></thead>
+          <tbody>
+      <tr><th scope="row">Fristoe</th><td class="barcell"><span class="hbar" style="width:100.0%"></span></td><td class="tot">46</td><td>5</td><td>9.2</td><td>35</td><td>49</td><td>58%</td></tr>
+      <tr><th scope="row">JoshuaR23</th><td class="barcell"><span class="hbar" style="width:89.1%"></span></td><td class="tot">41</td><td>5</td><td>8.2</td><td>54</td><td>24</td><td>31%</td></tr>
+      <tr><th scope="row">RayRod94</th><td class="barcell"><span class="hbar" style="width:63.0%"></span></td><td class="tot">29</td><td>5</td><td>5.8</td><td>29</td><td>18</td><td>38%</td></tr>
+      <tr><th scope="row">NickBowens</th><td class="barcell"><span class="hbar" style="width:58.7%"></span></td><td class="tot">27</td><td>5</td><td>5.4</td><td>30</td><td>28</td><td>48%</td></tr>
+      <tr><th scope="row">PrimeTimeJG</th><td class="barcell"><span class="hbar" style="width:47.8%"></span></td><td class="tot">22</td><td>5</td><td>4.4</td><td>28</td><td>18</td><td>39%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">The "% picks" column separates two styles even among the most active: some move roster players, some move draft capital. Across the whole league the range is wide — the busiest manager has traded about 2.3× as often as the league median of 20 — so these five are not representative of typical activity.</p>
+    </div>
+
+    <div class="fig">
+      <h3>Most frequent trade partners</h3>
+      <p class="sub">Top ten pairings by number of completed trades between them.</p>
+      <div class="rail pairs">
+    <div class="mrow" title="Fristoe and NickBowens: 9 trades"><span class="pname">Fristoe <em>&amp;</em> NickBowens</span><span class="mtrack"><span class="mbar" style="width:100.0%"><b>9</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and Fristoe: 7 trades"><span class="pname">JoshuaR23 <em>&amp;</em> Fristoe</span><span class="mtrack"><span class="mbar" style="width:77.8%"><b>7</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and GerCllz: 6 trades"><span class="pname">JoshuaR23 <em>&amp;</em> GerCllz</span><span class="mtrack"><span class="mbar" style="width:66.7%"><b>6</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and PrimeTimeJG: 5 trades"><span class="pname">JoshuaR23 <em>&amp;</em> PrimeTimeJG</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
+    <div class="mrow" title="Fristoe and raidersfantasy: 5 trades"><span class="pname">Fristoe <em>&amp;</em> raidersfantasy</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and RayRod94: 5 trades"><span class="pname">JoshuaR23 <em>&amp;</em> RayRod94</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and SmokeySupremacy: 4 trades"><span class="pname">JoshuaR23 <em>&amp;</em> SmokeySupremacy</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
+    <div class="mrow" title="Fristoe and PrimeTimeJG: 4 trades"><span class="pname">Fristoe <em>&amp;</em> PrimeTimeJG</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
+    <div class="mrow" title="JoshuaR23 and NickBowens: 4 trades"><span class="pname">JoshuaR23 <em>&amp;</em> NickBowens</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
+    <div class="mrow" title="NickBowens and Zaiah2000: 4 trades"><span class="pname">NickBowens <em>&amp;</em> Zaiah2000</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
+      </div>
+      <p class="note">74 of 120 possible pairings have ever traded — so about 62% of the league's relationships are live, and the rest have never done a deal. Trades cluster into repeat partnerships rather than spreading evenly.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What gets traded</h2>
+
+    <div class="stats">
+      <div class="stat acc"><i>Players moved</i><b>308</b><span>2.0 per trade on average</span></div>
+      <div class="stat"><i>Draft picks moved</i><b>263</b><span>85 picks for every 100 players</span></div>
+      <div class="stat hrd"><i>Trades including a pick</i><b>89%</b><span>139 of 156 — picks are the league's currency</span></div>
+    </div>
+
+    <div class="fig">
+      <h3>Positions traded, against their share of rosters</h3>
+      <p class="sub">Index = share of traded players ÷ share of rostered players, averaged over five seasons. Above 1.00 means the position changes hands more often than simply having a lot of them would explain.</p>
+      <div class="mx">
+        <table class="wide">
+          <thead><tr>
+            <th scope="col">Pos</th><th scope="col"></th><th scope="col">Traded</th>
+            <th scope="col">Share&nbsp;of&nbsp;trades</th><th scope="col">Share&nbsp;of&nbsp;rosters</th><th scope="col">Index</th>
+          </tr></thead>
+          <tbody>
+      <tr><th scope="row">WR</th><td class="barcell"><span class="hbar" style="width:100.0%"></span></td><td class="tot">113</td><td>36.7%</td><td>37.8%</td><td class="">0.97</td></tr>
+      <tr><th scope="row">RB</th><td class="barcell"><span class="hbar" style="width:87.6%"></span></td><td class="tot">99</td><td>32.1%</td><td>28.2%</td><td class="over">1.14</td></tr>
+      <tr><th scope="row">QB</th><td class="barcell"><span class="hbar" style="width:48.7%"></span></td><td class="tot">55</td><td>17.9%</td><td>17.7%</td><td class="">1.01</td></tr>
+      <tr><th scope="row">TE</th><td class="barcell"><span class="hbar" style="width:36.3%"></span></td><td class="tot">41</td><td>13.3%</td><td>16.3%</td><td class="under">0.82</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Receivers move most in raw volume, but only because there are more of them — their index is essentially neutral. Running backs are the genuinely over-traded position, and tight ends the most hoarded. Quarterbacks sit at almost exactly 1.00, which is notable in a superflex league: managers trade them at the rate they hold them, neither churning nor hoarding.</p>
+    </div>
+
+    <div class="fig">
+      <h3>Draft picks moved, by round</h3>
+      <p class="sub">Which rounds actually change hands.</p>
+      <div class="cols w5">
+    <div class="wcol" title="Round 1: 106 picks moved"><b>106</b><i class="wbar" style="height:112px"></i><span>rd 1</span></div>
+    <div class="wcol" title="Round 2: 77 picks moved"><b>77</b><i class="wbar" style="height:81px"></i><span>rd 2</span></div>
+    <div class="wcol" title="Round 3: 46 picks moved"><b>46</b><i class="wbar" style="height:49px"></i><span>rd 3</span></div>
+    <div class="wcol" title="Round 4: 25 picks moved"><b>25</b><i class="wbar" style="height:26px"></i><span>rd 4</span></div>
+    <div class="wcol" title="Round 5: 9 picks moved"><b>9</b><i class="wbar" style="height:10px"></i><span>rd 5</span></div>
+      </div>
+      <p class="note">First-rounders make up 40% of all pick movement. Fifth-rounders barely trade at all — this league deals in the top of the draft.</p>
+    </div>
+
+    <div class="fig">
+      <h3>Draft picks moved, by target season</h3>
+      <p class="sub">How far ahead the league is willing to deal.</p>
+      <div class="cols w8">
+    <div class="wcol" title="2022: 9 picks moved"><b>9</b><i class="wbar" style="height:16px"></i><span>2022</span></div>
+    <div class="wcol" title="2023: 54 picks moved"><b>54</b><i class="wbar" style="height:93px"></i><span>2023</span></div>
+    <div class="wcol" title="2024: 55 picks moved"><b>55</b><i class="wbar" style="height:95px"></i><span>2024</span></div>
+    <div class="wcol" title="2025: 53 picks moved"><b>53</b><i class="wbar" style="height:91px"></i><span>2025</span></div>
+    <div class="wcol" title="2026: 65 picks moved"><b>65</b><i class="wbar" style="height:112px"></i><span>2026</span></div>
+    <div class="wcol" title="2027: 23 picks moved"><b>23</b><i class="wbar" style="height:40px"></i><span>2027</span></div>
+    <div class="wcol" title="2028: 3 picks moved"><b>3</b><i class="wbar" style="height:5px"></i><span>2028</span></div>
+    <div class="wcol" title="2029: 1 picks moved"><b>1</b><i class="wbar" style="height:2px"></i><span>2029</span></div>
+      </div>
+      <p class="note">Movement collapses beyond two years out: only 3 picks for 2028 and 1 for 2029 have ever traded, against 65 for 2026. This is a near-term pick market — far-future capital is held, not dealt.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>When the league trades</h2>
+    <p class="dek" style="margin-bottom:16px">August is the busiest calendar month in league history at 35 trades, but October is one behind at 34 — and neither number means quite what it looks like.</p>
     <div class="stats">
       <div class="stat acc"><i>Busiest month</i><b>August</b><span>35 trades · 22.4% of all league history</span></div>
       <div class="stat hrd"><i>Close second</i><b>October</b><span>34 trades · 21.8% — the deadline run-up</span></div>
@@ -355,110 +460,6 @@
     </div>
     <p class="note">Consistently 7–11 trades league-wide — a live month, but well off the draft-day and deadline peaks. The next real spike is the deadline, which has arrived earlier each year: October 21 in 2024, October 22 in 2025.</p>
   </div>
-
-  <section>
-    <h2>Who trades</h2>
-    <p class="dek" style="margin-bottom:16px">Trade counts are keyed on manager account, not roster slot — roster IDs are only stable within a season, so counting them directly would scramble five years of history. Every manager in the league has made at least one trade.</p>
-
-    <div class="fig">
-      <h3>Five most active managers, 2022–2026</h3>
-      <p class="sub">A manager is counted once per trade they were part of. "Sent" counts assets leaving that roster. This is the top five by volume; the other 12 accounts across the five seasons are not listed.</p>
-      <div class="mx">
-        <table class="wide">
-          <thead><tr>
-            <th scope="col">Manager</th><th scope="col"></th><th scope="col">Trades</th>
-            <th scope="col">Seasons</th><th scope="col">Per&nbsp;season</th>
-            <th scope="col">Players&nbsp;sent</th><th scope="col">Picks&nbsp;sent</th><th scope="col">%&nbsp;picks</th>
-          </tr></thead>
-          <tbody>
-      <tr><th scope="row">Fristoe</th><td class="barcell"><span class="hbar" style="width:100.0%"></span></td><td class="tot">46</td><td>5</td><td>9.2</td><td>35</td><td>49</td><td>58%</td></tr>
-      <tr><th scope="row">JoshuaR23</th><td class="barcell"><span class="hbar" style="width:89.1%"></span></td><td class="tot">41</td><td>5</td><td>8.2</td><td>54</td><td>24</td><td>31%</td></tr>
-      <tr><th scope="row">RayRod94</th><td class="barcell"><span class="hbar" style="width:63.0%"></span></td><td class="tot">29</td><td>5</td><td>5.8</td><td>29</td><td>18</td><td>38%</td></tr>
-      <tr><th scope="row">NickBowens</th><td class="barcell"><span class="hbar" style="width:58.7%"></span></td><td class="tot">27</td><td>5</td><td>5.4</td><td>30</td><td>28</td><td>48%</td></tr>
-      <tr><th scope="row">PrimeTimeJG</th><td class="barcell"><span class="hbar" style="width:47.8%"></span></td><td class="tot">22</td><td>5</td><td>4.4</td><td>28</td><td>18</td><td>39%</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">The "% picks" column separates two styles even among the most active: some move roster players, some move draft capital. Across the whole league the range is wide — the busiest manager has traded about 2.3× as often as the league median of 20 — so these five are not representative of typical activity.</p>
-    </div>
-
-    <div class="fig">
-      <h3>Most frequent trade partners</h3>
-      <p class="sub">Top ten pairings by number of completed trades between them.</p>
-      <div class="rail pairs">
-    <div class="mrow" title="Fristoe and NickBowens: 9 trades"><span class="pname">Fristoe <em>&amp;</em> NickBowens</span><span class="mtrack"><span class="mbar" style="width:100.0%"><b>9</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and Fristoe: 7 trades"><span class="pname">JoshuaR23 <em>&amp;</em> Fristoe</span><span class="mtrack"><span class="mbar" style="width:77.8%"><b>7</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and GerCllz: 6 trades"><span class="pname">JoshuaR23 <em>&amp;</em> GerCllz</span><span class="mtrack"><span class="mbar" style="width:66.7%"><b>6</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and PrimeTimeJG: 5 trades"><span class="pname">JoshuaR23 <em>&amp;</em> PrimeTimeJG</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
-    <div class="mrow" title="Fristoe and raidersfantasy: 5 trades"><span class="pname">Fristoe <em>&amp;</em> raidersfantasy</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and RayRod94: 5 trades"><span class="pname">JoshuaR23 <em>&amp;</em> RayRod94</span><span class="mtrack"><span class="mbar" style="width:55.6%"><b>5</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and SmokeySupremacy: 4 trades"><span class="pname">JoshuaR23 <em>&amp;</em> SmokeySupremacy</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
-    <div class="mrow" title="Fristoe and PrimeTimeJG: 4 trades"><span class="pname">Fristoe <em>&amp;</em> PrimeTimeJG</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
-    <div class="mrow" title="JoshuaR23 and NickBowens: 4 trades"><span class="pname">JoshuaR23 <em>&amp;</em> NickBowens</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
-    <div class="mrow" title="NickBowens and Zaiah2000: 4 trades"><span class="pname">NickBowens <em>&amp;</em> Zaiah2000</span><span class="mtrack"><span class="mbar" style="width:44.4%"><b>4</b></span></span></div>
-      </div>
-      <p class="note">74 of 120 possible pairings have ever traded — so about 62% of the league's relationships are live, and the rest have never done a deal. Trades cluster into repeat partnerships rather than spreading evenly.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>What gets traded</h2>
-
-    <div class="stats">
-      <div class="stat acc"><i>Players moved</i><b>308</b><span>2.0 per trade on average</span></div>
-      <div class="stat"><i>Draft picks moved</i><b>263</b><span>85 picks for every 100 players</span></div>
-      <div class="stat hrd"><i>Trades including a pick</i><b>89%</b><span>139 of 156 — picks are the league's currency</span></div>
-    </div>
-
-    <div class="fig">
-      <h3>Positions traded, against their share of rosters</h3>
-      <p class="sub">Index = share of traded players ÷ share of rostered players, averaged over five seasons. Above 1.00 means the position changes hands more often than simply having a lot of them would explain.</p>
-      <div class="mx">
-        <table class="wide">
-          <thead><tr>
-            <th scope="col">Pos</th><th scope="col"></th><th scope="col">Traded</th>
-            <th scope="col">Share&nbsp;of&nbsp;trades</th><th scope="col">Share&nbsp;of&nbsp;rosters</th><th scope="col">Index</th>
-          </tr></thead>
-          <tbody>
-      <tr><th scope="row">WR</th><td class="barcell"><span class="hbar" style="width:100.0%"></span></td><td class="tot">113</td><td>36.7%</td><td>37.8%</td><td class="">0.97</td></tr>
-      <tr><th scope="row">RB</th><td class="barcell"><span class="hbar" style="width:87.6%"></span></td><td class="tot">99</td><td>32.1%</td><td>28.2%</td><td class="over">1.14</td></tr>
-      <tr><th scope="row">QB</th><td class="barcell"><span class="hbar" style="width:48.7%"></span></td><td class="tot">55</td><td>17.9%</td><td>17.7%</td><td class="">1.01</td></tr>
-      <tr><th scope="row">TE</th><td class="barcell"><span class="hbar" style="width:36.3%"></span></td><td class="tot">41</td><td>13.3%</td><td>16.3%</td><td class="under">0.82</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="note">Receivers move most in raw volume, but only because there are more of them — their index is essentially neutral. Running backs are the genuinely over-traded position, and tight ends the most hoarded. Quarterbacks sit at almost exactly 1.00, which is notable in a superflex league: managers trade them at the rate they hold them, neither churning nor hoarding.</p>
-    </div>
-
-    <div class="fig">
-      <h3>Draft picks moved, by round</h3>
-      <p class="sub">Which rounds actually change hands.</p>
-      <div class="cols w5">
-    <div class="wcol" title="Round 1: 106 picks moved"><b>106</b><i class="wbar" style="height:112px"></i><span>rd 1</span></div>
-    <div class="wcol" title="Round 2: 77 picks moved"><b>77</b><i class="wbar" style="height:81px"></i><span>rd 2</span></div>
-    <div class="wcol" title="Round 3: 46 picks moved"><b>46</b><i class="wbar" style="height:49px"></i><span>rd 3</span></div>
-    <div class="wcol" title="Round 4: 25 picks moved"><b>25</b><i class="wbar" style="height:26px"></i><span>rd 4</span></div>
-    <div class="wcol" title="Round 5: 9 picks moved"><b>9</b><i class="wbar" style="height:10px"></i><span>rd 5</span></div>
-      </div>
-      <p class="note">First-rounders make up 40% of all pick movement. Fifth-rounders barely trade at all — this league deals in the top of the draft.</p>
-    </div>
-
-    <div class="fig">
-      <h3>Draft picks moved, by target season</h3>
-      <p class="sub">How far ahead the league is willing to deal.</p>
-      <div class="cols w8">
-    <div class="wcol" title="2022: 9 picks moved"><b>9</b><i class="wbar" style="height:16px"></i><span>2022</span></div>
-    <div class="wcol" title="2023: 54 picks moved"><b>54</b><i class="wbar" style="height:93px"></i><span>2023</span></div>
-    <div class="wcol" title="2024: 55 picks moved"><b>55</b><i class="wbar" style="height:95px"></i><span>2024</span></div>
-    <div class="wcol" title="2025: 53 picks moved"><b>53</b><i class="wbar" style="height:91px"></i><span>2025</span></div>
-    <div class="wcol" title="2026: 65 picks moved"><b>65</b><i class="wbar" style="height:112px"></i><span>2026</span></div>
-    <div class="wcol" title="2027: 23 picks moved"><b>23</b><i class="wbar" style="height:40px"></i><span>2027</span></div>
-    <div class="wcol" title="2028: 3 picks moved"><b>3</b><i class="wbar" style="height:5px"></i><span>2028</span></div>
-    <div class="wcol" title="2029: 1 picks moved"><b>1</b><i class="wbar" style="height:2px"></i><span>2029</span></div>
-      </div>
-      <p class="note">Movement collapses beyond two years out: only 3 picks for 2028 and 1 for 2029 have ever traded, against 65 for 2026. This is a near-term pick market — far-future capital is held, not dealt.</p>
-    </div>
-  </section>
 
   <section>
     <h2>Method</h2>
