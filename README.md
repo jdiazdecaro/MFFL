@@ -2,7 +2,7 @@
 
 Data-driven grades for all 16 teams in the MFFL 2026 rookie draft.
 
-**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)**
+**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)** · **[Trade history](https://jdiazdecaro.github.io/MFFL/trades.html)**
 
 ## League
 
@@ -20,6 +20,7 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
+- **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
 
 ## Method
 
@@ -38,6 +39,12 @@ Talent and value are scored separately on purpose. Collapsing them punishes team
 
 Opponent scores are projected from current rosters, Sleeper's weekly 2026 player projections, and four seasons of measured lineup-setting efficiency per manager. "Toughest week" is the lowest win probability of the season; "bye-week dip" is how far a team's own lineup falls below its average when its starters' NFL byes stack up.
 
+### Trade history
+
+Every `transactions/{week}` endpoint, weeks 1–18, across all five league seasons, filtered to completed trades and deduplicated by transaction ID — 156 in total. Trades are bucketed by `status_updated` (when the trade processed) rather than by league week, so offseason moves land in their true calendar month.
+
+The league was founded 2022-08-16 and the data runs to 2026-08-15, which gives every calendar month exactly 4.0 observed league-months. Raw monthly counts are therefore directly comparable without normalising.
+
 ## Caveats
 
 Consensus rank compresses everything outside the top ~250 into a single undifferentiated bucket, so late-round grades separate players by depth chart and age rather than by talent. August depth charts are also noisy and shift through final cuts.
@@ -46,4 +53,4 @@ The top of the board is far firmer than the bottom. Value figures are model outp
 
 ## Source
 
-Built from `api.sleeper.app` draft, roster, user, and player endpoints. Draft ID `1328167060039020544`, league ID `1328167060034834432`.
+Built from `api.sleeper.app` draft, roster, user, transaction, and player endpoints. Draft ID `1328167060039020544`, league ID `1328167060034834432`. Trade history additionally uses the 2022–2025 league IDs.
