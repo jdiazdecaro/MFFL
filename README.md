@@ -2,7 +2,7 @@
 
 Data-driven grades for all 16 teams in the MFFL 2026 rookie draft.
 
-**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)** · **[Trade history](https://jdiazdecaro.github.io/MFFL/trades.html)**
+**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)** · **[Trade history](https://jdiazdecaro.github.io/MFFL/trades.html)** · **[The Beat](https://jdiazdecaro.github.io/MFFL/beat.html)**
 
 ## League
 
@@ -21,6 +21,7 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
+- **The Beat** (`beat.html`) — a weekly newspaper-style report: the week's slate with projected margins, the offseason trade ledger, first-round pick ownership, and a capsule on all 16 teams.
 
 ## Method
 
@@ -38,6 +39,19 @@ Talent and value are scored separately on purpose. Collapsing them punishes team
 ### Strength of schedule
 
 Opponent scores are projected from current rosters, Sleeper's weekly 2026 player projections, and four seasons of measured lineup-setting efficiency per manager. "Toughest week" is the lowest win probability of the season; "bye-week dip" is how far a team's own lineup falls below its average when its starters' NFL byes stack up.
+
+### The Beat
+
+A week-by-week column built from the same live endpoints. Projected scores are each team's **best legal
+lineup** (QB/RB/RB/WR/WR/TE/FLEX/FLEX/SUPERFLEX) scored from **raw projected stats against MFFL's own
+`scoring_settings`** — not Sleeper's `pts_ppr`, which ignores this league's completion scoring, rushing
+first downs and tight-end premium and misranks QBs and TEs as a result.
+
+Roster value and the under-24 share come from FantasyCalc dynasty values (superflex, full PPR) with a
+positional correction for MFFL scoring (QB ×1.14, RB ×1.43, TE ×1.24, WR ×1.00). Pick ownership is read
+from `traded_picks`. Every superlative on the page is computed and regression-checked rather than asserted.
+
+No projected records or playoff odds appear on the page — that split is deliberate.
 
 ### Trade history
 
