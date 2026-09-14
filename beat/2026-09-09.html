@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The MFFL Beat, week 1 of 2026: the results, the highs and lows, what the projections missed, and a report on all sixteen teams.">
+<meta name="description" content="Past edition, September 9, 2026. The MFFL Beat, week 1 of 2026: the slate, the offseason ledger, and a report on all sixteen teams.">
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
@@ -18,7 +18,7 @@
 </style>
 </head>
 <body>
-<title>MFFL 2026: The Beat</title>
+<title>The Beat, Vol. V No. 1</title>
 
 <style>
   :root {
@@ -134,10 +134,10 @@
   /* ---------- agate: slate + tables ---------- */
   .games { display: flex; flex-direction: column; border-top: 2px solid var(--ink);
            border-bottom: 2px solid var(--ink); }
-  .game { display: grid; grid-template-columns: 1fr 132px 1fr 78px; gap: 12px;
+  .game { display: grid; grid-template-columns: 1fr 96px 1fr 78px; gap: 12px;
           align-items: center; padding: 10px 4px; border-bottom: 1px solid var(--rule); }
   .game:last-child { border-bottom: 0; }
-  .ghead { display: grid; grid-template-columns: 1fr 132px 1fr 78px; gap: 12px;
+  .ghead { display: grid; grid-template-columns: 1fr 96px 1fr 78px; gap: 12px;
            padding: 7px 4px 8px; border-bottom: 1px solid var(--rule-strong);
            font-family: var(--sans); font-size: 9px; letter-spacing: .2em;
            text-transform: uppercase; color: var(--ink-3); }
@@ -149,7 +149,7 @@
   .gt.away { text-align: right; }
   .gscore { display: flex; align-items: center; justify-content: center; gap: 6px;
             font-family: var(--head); font-variant-numeric: tabular-nums;
-            font-size: 1.02rem; font-weight: 800; white-space: nowrap; }
+            font-size: 1.12rem; font-weight: 800; }
   .gscore .lo { color: var(--ink-3); font-weight: 500; }
   .gscore .v { color: var(--ink-3); font-size: .72rem; font-weight: 400; }
   .gmarg { text-align: right; font-family: var(--sans); font-variant-numeric: tabular-nums;
@@ -260,15 +260,17 @@
 
   .asof a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
   .asof a:hover { border-bottom-color: var(--accent); }
+  .past { border-top: 2px solid var(--accent); border-bottom: 2px solid var(--accent); }
+  .past b { color: var(--accent); }
 </style>
 
 <div class="wrap">
 
   <nav class="tabs">
-    <a href="index.html">Draft grades</a>
-    <a href="schedule.html">Strength of schedule</a>
-    <a href="trades.html">Trade history</a>
-    <a href="beat.html" class="on">The Beat</a>
+    <a href="../index.html">Draft grades</a>
+    <a href="../schedule.html">Strength of schedule</a>
+    <a href="../trades.html">Trade history</a>
+    <a href="../beat.html" class="on">The Beat</a>
   </nav>
 
   <header class="masthead">
@@ -278,415 +280,285 @@
       <h1>The Beat</h1>
     </div>
     <div class="dateline">
-      <span>Vol. V &middot; No. 2</span>
-      <span>Monday, September 14, 2026</span>
-      <span>Week One in the Books</span>
+      <span>Vol. V &middot; No. 1</span>
+      <span>Wednesday, September 9, 2026</span>
+      <span>Week One</span>
       <span>Sixteen Teams &middot; Superflex Dynasty</span>
     </div>
   </header>
+
+  <p class="asof past">
+    <b>Past edition</b>
+    This is <em>Vol. V, No. 1</em>, published Wednesday, September 9, 2026, before week 1 was played.
+    It is kept exactly as it ran and is not updated. Read the
+    <a href="../beat.html">current edition</a> or browse the <a href="index.html">archive</a>.
+  </p>
+
   <p class="asof">
     <b>Snapshot</b>
-    Current as of <em>Monday morning, September 14, 2026</em>. Fifteen of sixteen NFL games are final.
-    Denver at Kansas City has not kicked off, so <em>eight starting slots on five MFFL rosters are
-    still open</em> and worth a projected <em>123.06</em> points between them. Every number on
-    this page is through Sunday night.
-    Past editions are in the <a href="beat/index.html">archive</a>.
+    Current as of <em>September 9, 2026</em>. Rosters, trades and waiver claims as they stand this
+    morning, against Sleeper's weekly 2026 projections scored under MFFL's own settings.
+    Week 1 has not been played.
   </p>
 
 
   <section>
-    <h2><span class="kicker">The column</span>The projections were too high. All of them.</h2>
-    <p class="dek">Thirteen of sixteen teams scored under their preseason number. The team that beat
-    it by the most was not supposed to be near the top.</p>
+    <h2><span class="kicker">The column</span>Sixteen teams, two leagues</h2>
+    <p class="dek">A 94.9-point gap separates the best roster in this league from the worst.
+    Every inch of it was built on purpose.</p>
     <p class="byline">By The Beat &middot; Staff report</p>
     <div class="panel lede">
-      <p>The MFFL averaged <b>127.27</b> points in week 1. The preseason model said
-      <b>150.93</b>. <b>13 of 16</b> teams finished under their own number. Some of
-      that gap closes Monday night, but not most of it.</p>
+      <p>The MFFL opens its fifth season Wednesday with a <b>94.9-point</b> gap between its best
+      roster and its worst. <b>CeeDees TDs</b> projects <b>201.1</b> points a
+      week. <b>Loud and Stroud</b> projects <b>106.3</b>. The schedule did not do
+      that. Sixteen managers did, one trade at a time, over five months.</p>
 
-      <p>The week belonged to <b>Bay Area Party Supplies</b>, and almost nobody saw it coming. It scored
-      <b>197.20</b>, the most in the league, and it was projected <b>5th</b>.
-      Caleb Williams went for <b>41.07</b>, the best quarterback game of the week. Ashton Jeanty
-      added <b>39.70</b> with a knee tag on him all Saturday. The roster left
-      <b>7.90</b> points on the bench. Only Demboyz left fewer, and Demboyz scored
-      <b>90.90</b>. Bay Area Party Supplies beat its preseason number by
-      <b>33.90</b>. Nobody else beat theirs by more than
-      <b>11.37</b>.</p>
+      <p>The split is clean, and you can read it right off the table. <b>Every one of the top eight
+      rosters</b> has 31% or less of its value tied up in players under 24. <b>All four of the
+      bottom four</b> have 48% or more. Young teams are bad this year. Old teams are good. There
+      is barely an exception in the league. The top four average <b>188.6</b> points a week. The
+      bottom four average <b>118.5</b>. That is a <b>70.1-point</b> gap inside one league.
+      The middle sits around 147.8, and the teams parked there are the ones that did the least all
+      summer.</p>
 
-      <p>At the top, the favourites mostly held. <b>CeeDees TDs</b> scored <b>180.47</b> and
-      won by <b>66.01</b>. <b>The People’s Champ</b> scored <b>190.84</b> and won by
-      <b>99.94</b>, and did it while Ja’Marr Chase, the fourth most valuable player in this
-      league, caught two balls for <b>3.20</b>. That is what a deep roster is for.</p>
+      <p>Two managers pushed it to the limit. <b>CeeDees TDs</b> has
+      <b>1%</b> of its value under 24. <b>The People’s Champ</b> has
+      <b>0%</b>. Both sold the future outright and will be judged in
+      January. <b>Blue Tent All-Stars</b> went the other way at
+      <b>59%</b>, more of its money in young players than anyone
+      else in the league, and projects 123.8. Both plans are coherent. Neither is comfortable.</p>
 
-      <p>The floor was worse than advertised. <b>Six games</b> were decided by more than 55 points.
-      <b>One</b> was decided by less than ten. The closest game of the week is already final:
-      <b>Blue Tent All-Stars 107.86, Remember the raiders 101.70</b>. Both teams have
-      every starter locked. Everything else on the board was over by Sunday afternoon.</p>
+      <p>The strange one is in the middle. <b>The Comeback Kid</b> made
+      <b>7</b> of the league's <b>14</b> trades, half of them
+      by himself, and projects 15th at 107.6. He owns
+      <b>1</b> of a possible four first-round picks in 2027 and 2028.
+      Activity is not accumulation. <b>Bay Area Party Supplies</b> made
+      2 trades, said little, and owns
+      <b>6</b> of those same firsts while projecting fifth.</p>
     </div>
   </section>
 
 
   <section>
-    <h2><span class="kicker">Week 1 &middot; the results</span>One close game, six decided by 55 or more</h2>
-    <p class="dek">Actual points scored, loser first, closest game at the top. A dagger means that
-    team still has a starter in Monday night’s game.</p>
+    <h2><span class="kicker">Week 1 &middot; the slate</span>Eight games, two worth watching</h2>
+    <p class="dek">Projected scores are each team's best legal lineup under MFFL scoring, ordered by
+    margin. Closest first.</p>
 
     <div class="games">
       <div class="ghead">
-        <span class="r">Loser</span><span class="c">Points</span><span>Winner</span><span class="r">Margin</span>
+        <span class="r">Underdog</span><span class="c">Proj.</span><span>Favourite</span><span class="r">Margin</span>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Remember the raiders</div><div class="m">raidersfantasy &middot; proj. 10th</div></div>
-        <div class="gscore"><span class="lo">101.70</span><span class="v">-</span><span>107.86</span></div>
-        <div class="gt home"><div class="n">Blue Tent All-Stars</div><div class="m">SmokeySupremacy &middot; proj. 14th</div></div>
-        <div class="gmarg close"><b>6.16</b>one-score game</div>
+        <div class="gt away"><div class="n">bLuE BaLLeRs</div><div class="m">RayRod94 &middot; 11th</div></div>
+        <div class="gscore"><span class="lo">155</span><span class="v">-</span><span>158</span></div>
+        <div class="gt home"><div class="n">TexasTimeshifts</div><div class="m">TexasTimeshifts &middot; 8th</div></div>
+        <div class="gmarg close"><b>2.8</b>one-score game</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">TexasTimeshifts &dagger;</div><div class="m">TexasTimeshifts &middot; proj. 8th</div></div>
-        <div class="gscore"><span class="lo">93.34</span><span class="v">-</span><span>127.57</span></div>
-        <div class="gt home"><div class="n">bLuE BaLLeRs &dagger;</div><div class="m">RayRod94 &middot; proj. 11th</div></div>
-        <div class="gmarg "><b>34.23</b>comfortable</div>
+        <div class="gt away"><div class="n">Brute Force Attack</div><div class="m">efuentesjr &middot; 6th</div></div>
+        <div class="gscore"><span class="lo">160</span><span class="v">-</span><span>164</span></div>
+        <div class="gt home"><div class="n">Bay Area Party Supplies</div><div class="m">JPuente1 &middot; 5th</div></div>
+        <div class="gmarg close"><b>3.6</b>one-score game</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Vick2times</div><div class="m">vick2times &middot; proj. 13th</div></div>
-        <div class="gscore"><span class="lo">73.07</span><span class="v">-</span><span>128.83</span></div>
-        <div class="gt home"><div class="n">Chosen one. &dagger;</div><div class="m">Fristoe &middot; proj. 4th</div></div>
-        <div class="gmarg "><b>55.76</b>lopsided</div>
+        <div class="gt away"><div class="n">Blue Tent All-Stars</div><div class="m">SmokeySupremacy &middot; 14th</div></div>
+        <div class="gscore"><span class="lo">128</span><span class="v">-</span><span>145</span></div>
+        <div class="gt home"><div class="n">Remember the raiders</div><div class="m">raidersfantasy &middot; 10th</div></div>
+        <div class="gmarg "><b>17.7</b>comfortable</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">The Comeback Kid</div><div class="m">JoshuaR23 &middot; proj. 15th</div></div>
-        <div class="gscore"><span class="lo">114.46</span><span class="v">-</span><span>180.47</span></div>
-        <div class="gt home"><div class="n">CeeDees TDs</div><div class="m">NickBowens &middot; proj. 1st</div></div>
-        <div class="gmarg "><b>66.01</b>lopsided</div>
+        <div class="gt away"><div class="n">Vick2times</div><div class="m">vick2times &middot; 13th</div></div>
+        <div class="gscore"><span class="lo">144</span><span class="v">-</span><span>178</span></div>
+        <div class="gt home"><div class="n">Chosen one.</div><div class="m">Fristoe &middot; 4th</div></div>
+        <div class="gmarg "><b>34.1</b>lopsided</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Brute Force Attack</div><div class="m">efuentesjr &middot; proj. 6th</div></div>
-        <div class="gscore"><span class="lo">128.90</span><span class="v">-</span><span>197.20</span></div>
-        <div class="gt home"><div class="n">Bay Area Party Supplies</div><div class="m">JPuente1 &middot; proj. 5th</div></div>
-        <div class="gmarg "><b>68.30</b>lopsided</div>
+        <div class="gt away"><div class="n">Demboyz</div><div class="m">88boyz11 &middot; 9th</div></div>
+        <div class="gscore"><span class="lo">155</span><span class="v">-</span><span>201</span></div>
+        <div class="gt home"><div class="n">The People’s Champ</div><div class="m">GerCllz &middot; 2nd</div></div>
+        <div class="gmarg "><b>45.7</b>lopsided</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Loud and Stroud</div><div class="m">Zaiah2000 &middot; proj. 16th</div></div>
-        <div class="gscore"><span class="lo">91.13</span><span class="v">-</span><span>165.27</span></div>
-        <div class="gt home"><div class="n">SlickBears</div><div class="m">TreyF3 &middot; proj. 7th</div></div>
-        <div class="gmarg "><b>74.14</b>lopsided</div>
+        <div class="gt away"><div class="n">Loud and Stroud</div><div class="m">Zaiah2000 &middot; 16th</div></div>
+        <div class="gscore"><span class="lo">114</span><span class="v">-</span><span>160</span></div>
+        <div class="gt home"><div class="n">SlickBears</div><div class="m">TreyF3 &middot; 7th</div></div>
+        <div class="gmarg "><b>46.4</b>lopsided</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Demboyz</div><div class="m">88boyz11 &middot; proj. 9th</div></div>
-        <div class="gscore"><span class="lo">90.90</span><span class="v">-</span><span>190.84</span></div>
-        <div class="gt home"><div class="n">The People’s Champ</div><div class="m">GerCllz &middot; proj. 2nd</div></div>
-        <div class="gmarg blowout"><b>99.94</b>not a game</div>
+        <div class="gt away"><div class="n">Do it to them</div><div class="m">CarlosMalagon &middot; 12th</div></div>
+        <div class="gscore"><span class="lo">142</span><span class="v">-</span><span>188</span></div>
+        <div class="gt home"><div class="n">Child Support 💸</div><div class="m">PrimeTimeJG &middot; 3rd</div></div>
+        <div class="gmarg "><b>46.8</b>lopsided</div>
       </div>
       <div class="game">
-        <div class="gt away"><div class="n">Do it to them &dagger;</div><div class="m">CarlosMalagon &middot; proj. 12th</div></div>
-        <div class="gscore"><span class="lo">67.50</span><span class="v">-</span><span>177.35</span></div>
-        <div class="gt home"><div class="n">Child Support 💸 &dagger;</div><div class="m">PrimeTimeJG &middot; proj. 3rd</div></div>
-        <div class="gmarg blowout"><b>109.85</b>not a game</div>
+        <div class="gt away"><div class="n">The Comeback Kid</div><div class="m">JoshuaR23 &middot; 15th</div></div>
+        <div class="gscore"><span class="lo">123</span><span class="v">-</span><span>204</span></div>
+        <div class="gt home"><div class="n">CeeDees TDs</div><div class="m">NickBowens &middot; 1st</div></div>
+        <div class="gmarg blowout"><b>80.4</b>not a game</div>
       </div>
     </div>
 
     <div class="panel brief" style="margin-top:18px">
-      <p><b>The average margin was 64.30 points.</b> That is not a
-      normal week. Five of eight winners cleared 165. Five of eight losers failed to reach 95. The
-      league split into two halves on the first Sunday and the schedule had almost nothing to do
-      with it.</p>
+      <p><b>Game of the week: TexasTimeshifts at bLuE BaLLeRs.</b>
+      2.8 points apart, the closest on the board. The teams ranked 8th and
+      11th did not make a single trade between them all offseason.
+      Neither did anything dramatic. Both may be better than the quiet suggests.</p>
 
-      <p><b>Two projected favourites lost.</b> bLuE BaLLeRs was a 2.8-point underdog on paper and won
-      by <b>34.23</b>. Blue Tent All-Stars was a 17.7-point underdog and won by
-      <b>6.16</b>. The other six went to the projected favourite. All six by more than 55.</p>
+      <p><b>Runner-up: Bay Area Party Supplies and Brute Force Attack</b>, 3.6 apart, and a clearer
+      clash of styles. Bay Area Party Supplies leans on 64.8 points a week of
+      receiver production, most in the league. Brute Force Attack answers with
+      74.0 from its backs.</p>
 
-      <p><b>Two results can still move.</b> bLuE BaLLeRs leads TexasTimeshifts by
-      <b>34.23</b> with one Denver starter each. Child Support leads Do it to them by
-      <b>109.85</b> with two apiece. Neither is realistically in doubt. Every other game is
-      final.</p>
+      <p><b>CeeDees TDs vs. The Comeback Kid is 80.4 points</b>, the widest
+      margin of the week. The number is real. CeeDees TDs projects the most points in the
+      league. The Comeback Kid projects 15th.</p>
     </div>
   </section>
 
+
   <section>
-    <h2><span class="kicker">The highs</span>Gibbs 45.60. Nobody else reached 42.</h2>
-    <p class="dek">The fifteen best games by a player who was actually in a starting lineup.
-    Points are MFFL scoring, not standard PPR.</p>
+    <h2><span class="kicker">The injury report</span>Seven of the top fifty are questionable</h2>
+    <p class="dek">Every rostered player carrying an NFL injury designation this morning.
+    <b>73</b> of the league's <b>375</b> rostered players have one, and <b>25</b>
+    of them are in a week 1 starting lineup.</p>
 
     <div class="scroll">
       <table class="tbl">
-        <thead><tr><th class="num">Rank</th><th>Player</th><th class="num">Points</th><th>Started by</th></tr></thead>
+        <thead><tr><th class="num">Value rank</th><th>Player</th><th>Status</th><th>Week 1</th><th>Roster</th></tr></thead>
         <tbody>
-      <tr><td class='num' style='color:var(--ink-3)'>1</td><td class='who'>Jahmyr Gibbs<br><span class='d'>RB &middot; DET</span></td><td class='num'><b>45.60</b></td><td>CeeDees TDs</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>2</td><td class='who'>Caleb Williams<br><span class='d'>QB &middot; CHI</span></td><td class='num'><b>41.07</b></td><td>Bay Area Party Supplies</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>3</td><td class='who'>Ashton Jeanty<br><span class='d'>RB &middot; LV</span></td><td class='num'><b>39.70</b></td><td>Bay Area Party Supplies</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>4</td><td class='who'>Derrick Henry<br><span class='d'>RB &middot; BAL</span></td><td class='num'><b>39.30</b></td><td>Brute Force Attack</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>5</td><td class='who'>Bijan Robinson<br><span class='d'>RB &middot; ATL</span></td><td class='num'><b>38.30</b></td><td>The People’s Champ</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>6</td><td class='who'>Josh Allen<br><span class='d'>QB &middot; BUF</span></td><td class='num'><b>36.63</b></td><td>Chosen one.</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>7</td><td class='who'>Trey McBride<br><span class='d'>TE &middot; ARI</span></td><td class='num'><b>34.90</b></td><td>SlickBears</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>8</td><td class='who'>Jalen Coker<br><span class='d'>WR &middot; CAR</span></td><td class='num'><b>34.50</b></td><td>bLuE BaLLeRs</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>9</td><td class='who'>D'Andre Swift<br><span class='d'>RB &middot; CHI</span></td><td class='num'><b>34.40</b></td><td>The People’s Champ</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>10</td><td class='who'>Jaxson Dart<br><span class='d'>QB &middot; NYG</span></td><td class='num'><b>33.77</b></td><td>Child Support 💸</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>11</td><td class='who'>Bryce Young<br><span class='d'>QB &middot; CAR</span></td><td class='num'><b>32.93</b></td><td>Child Support 💸</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>12</td><td class='who'>Justin Jefferson<br><span class='d'>WR &middot; MIN</span></td><td class='num'><b>31.30</b></td><td>Child Support 💸</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>13</td><td class='who'>David Montgomery<br><span class='d'>RB &middot; HOU</span></td><td class='num'><b>30.90</b></td><td>SlickBears</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>14</td><td class='who'>Jonathan Taylor<br><span class='d'>RB &middot; IND</span></td><td class='num'><b>30.10</b></td><td>The People’s Champ</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>15</td><td class='who'>Brock Purdy<br><span class='d'>QB &middot; SF</span></td><td class='num'><b>29.53</b></td><td>Blue Tent All-Stars</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>4</td><td class='who'>Ja&#x27;Marr Chase<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>WR &middot; CIN</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Knee</span></td><td><b>starts week 1</b></td><td>The People’s Champ</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>7</td><td class='who'>Ashton Jeanty<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>RB &middot; LV</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Knee</span></td><td><b>starts week 1</b></td><td>Bay Area Party Supplies</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>11</td><td class='who'>Jeremiyah Love<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>RB &middot; ARI</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Ankle</span></td><td><b>starts week 1</b></td><td>Demboyz</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>28</td><td class='who'>Malik Nabers<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>WR &middot; NYG</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Knee - ACL</span></td><td><b>starts week 1</b></td><td>Brute Force Attack</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>31</td><td class='who'>Patrick Mahomes<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>QB &middot; KC</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Knee - ACL</span></td><td><b>starts week 1</b></td><td>Chosen one.</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>33</td><td class='who'>Tyler Warren<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>TE &middot; IND</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Groin</span></td><td><b>starts week 1</b></td><td>Bay Area Party Supplies</td></tr>
+      <tr><td class='num' style='color:var(--ink-3)'>35</td><td class='who'>Breece Hall<br><span style='font-family:var(--sans);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:400'>RB &middot; NYJ</span></td><td>Questionable<br><span style='color:var(--ink-3)'>Thigh</span></td><td><b>starts week 1</b></td><td>Brute Force Attack</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="panel brief" style="margin-top:18px">
-      <p><b>Jahmyr Gibbs, 45.60.</b> 29 carries, 156 yards, two touchdowns, five
-      catches, and <b>12 rushing first downs</b>, which are worth a point each here. Best game in
-      the league by <b>4.53</b>. The other eight CeeDees TDs starters produced
-      <b>134.87</b> between them.</p>
+      <p><b>The top of the league is the hurt part of it.</b> Seven of the fifty most valuable players
+      in the MFFL are questionable for week 1, and they are not depth pieces: the
+      <b>4th</b>, <b>7th</b> and <b>11th</b> most
+      valuable players in the league are Ja&#x27;Marr Chase, Ashton Jeanty and
+      Jeremiyah Love. All three start on Sunday. All three are knee or ankle.</p>
 
-      <p><b>Child Support got 66.70 points from two quarterbacks.</b> Most in the
-      league. The two were <b>Jaxson Dart</b> at 33.77 and <b>Bryce Young</b> at 32.93,
-      and Child Support is the team this page called “built off the wire” a week ago. It has
-      Kenneth Walker and Rashee Rice still to play.</p>
+      <p><b>Three teams carry 3 injured starters apiece:</b> The People’s Champ, Bay Area Party Supplies and
+      Demboyz. All three sit in the top nine, which is how a projection turns into a rumour by
+      Sunday morning. Bay Area Party Supplies has the most injured players overall at <b>8</b>.
+      CeeDees TDs, Brute Force Attack and Loud and Stroud have the fewest, at 2 each.</p>
 
-      <p><b>Trey McBride, 34.90.</b> Nine catches on 13 targets, 95 yards, a
-      touchdown, five first downs. Best tight end game by anyone in a starting lineup, in a league
-      that pays tight ends extra. It is why SlickBears won by 74.14 while starting one
-      quarterback. Matthew Stafford gave SlickBears 5.67 points. It did not matter.</p>
+      <p><b>Then there is the IR.</b> <b>11</b> players sit on reserve slots, led by
+      Zach Charbonnet (Knee - ACL, Child Support 💸) and
+      Jayden Higgins (Knee - ACL, Blue Tent All-Stars). The second one stings:
+      Jayden Higgins was the return in April's trade that sent T.J. Hockenson the other way, and
+      he tore an ACL before playing a snap for his new roster.</p>
 
-      <p><b>Ashton Jeanty ran for 102 yards on 23 carries.</b> He was questionable all week with a
-      knee. He finished 39.70, third best in the league. Breece Hall, also questionable, also
-      ran for 102, and gave Brute Force Attack 25.80. The Saturday injury report was noise on
-      both.</p>
+      <p><b>A word of caution on all of this.</b> A questionable tag in the first week of September is a
+      soft signal. Some of these are precautionary, some are veterans on a rest schedule, and a few of
+      the ACL notes are last season's injury still on the file rather than a new one. Read the table as
+      a watch list, not a casualty list.</p>
     </div>
   </section>
 
 
   <section>
-    <h2><span class="kicker">The lows</span>Four starters caught nothing. All four dressed.</h2>
-    <p class="dek">Kyle Pitts, Colston Loveland, Romeo Doubs and Jordan Addison were active, were
-    targeted, and finished on zero.</p>
+    <h2><span class="kicker">The ledger</span>Fourteen trades, and who made them</h2>
+    <p class="dek">Every completed trade since April, oldest first. Each column shows what
+    that side received. Picks in brackets started somewhere else. There were also <b>230</b>
+    free agent and waiver moves in the same window.</p>
+
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>Date</th><th>Received</th><th>Received</th></tr></thead>
+        <tbody>
+      <tr><td class='d'>Apr 22</td><td><b>The Comeback Kid</b><br>T.J. Hockenson <span style='color:var(--ink-3)'>TE</span><br>2026 3rd<br>2027 2nd</td><td><b>Blue Tent All-Stars</b><br>Jayden Higgins <span style='color:var(--ink-3)'>WR</span><br>2028 2nd <span style='color:var(--ink-3)'>(The Comeback K)</span></td></tr>
+      <tr><td class='d'>Apr 22</td><td><b>Brute Force Attack</b><br>Sam Darnold <span style='color:var(--ink-3)'>QB</span><br>Drew Lock <span style='color:var(--ink-3)'>QB</span></td><td><b>The Comeback Kid</b><br>2027 1st <span style='color:var(--ink-3)'>(Brute Force At)</span></td></tr>
+      <tr><td class='d'>Apr 22</td><td><b>The Comeback Kid</b><br>Chuba Hubbard <span style='color:var(--ink-3)'>RB</span><br>Jaylen Warren <span style='color:var(--ink-3)'>RB</span></td><td><b>CeeDees TDs</b><br>Kyren Williams <span style='color:var(--ink-3)'>RB</span></td></tr>
+      <tr><td class='d'>Jun 10</td><td><b>Demboyz</b><br>2026 1st <span style='color:var(--ink-3)'>(Vick2times)</span></td><td><b>Do it to them</b><br>2026 1st <span style='color:var(--ink-3)'>(Child Support )</span><br>2026 1st <span style='color:var(--ink-3)'>(Demboyz)</span></td></tr>
+      <tr><td class='d'>Jun 19</td><td><b>The Comeback Kid</b><br>2026 2nd<br>2026 2nd <span style='color:var(--ink-3)'>(Chosen one.)</span><br>2027 2nd <span style='color:var(--ink-3)'>(bLuE BaLLeRs)</span></td><td><b>Chosen one.</b><br>Chuba Hubbard <span style='color:var(--ink-3)'>RB</span><br>Isaiah Likely <span style='color:var(--ink-3)'>TE</span><br>2026 3rd <span style='color:var(--ink-3)'>(The Comeback K)</span></td></tr>
+      <tr><td class='d'>Jun 19</td><td><b>The Comeback Kid</b><br>2026 1st <span style='color:var(--ink-3)'>(Bay Area Party)</span><br>2026 2nd <span style='color:var(--ink-3)'>(Bay Area Party)</span><br>2026 3rd <span style='color:var(--ink-3)'>(Demboyz)</span></td><td><b>Bay Area Party Supplies</b><br>Stefon Diggs <span style='color:var(--ink-3)'>WR</span><br>2028 1st <span style='color:var(--ink-3)'>(The Comeback K)</span></td></tr>
+      <tr><td class='d'>Jun 27</td><td><b>Bay Area Party Supplies</b><br>Tyson Bagent <span style='color:var(--ink-3)'>QB</span><br>Michael Mayer <span style='color:var(--ink-3)'>TE</span></td><td><b>Vick2times</b><br>2026 4th <span style='color:var(--ink-3)'>(Bay Area Party)</span><br>2027 3rd <span style='color:var(--ink-3)'>(Bay Area Party)</span><br>2026 3rd <span style='color:var(--ink-3)'>(Chosen one.)</span></td></tr>
+      <tr><td class='d'>Jun 30</td><td><b>The Comeback Kid</b><br>Brian Thomas <span style='color:var(--ink-3)'>WR</span></td><td><b>Vick2times</b><br>2026 1st <span style='color:var(--ink-3)'>(Bay Area Party)</span><br>2026 3rd <span style='color:var(--ink-3)'>(Demboyz)</span></td></tr>
+      <tr><td class='d'>Jul 22</td><td><b>The Comeback Kid</b><br>Jacoby Brissett <span style='color:var(--ink-3)'>QB</span><br>2026 2nd <span style='color:var(--ink-3)'>(Remember the r)</span></td><td><b>The People’s Champ</b><br>T.J. Hockenson <span style='color:var(--ink-3)'>TE</span><br>Jaylen Warren <span style='color:var(--ink-3)'>RB</span></td></tr>
+      <tr><td class='d'>Aug 1</td><td><b>The People’s Champ</b><br>2026 3rd <span style='color:var(--ink-3)'>(Do it to them)</span></td><td><b>Do it to them</b><br>2028 3rd <span style='color:var(--ink-3)'>(The People’s C)</span></td></tr>
+      <tr><td class='d'>Aug 1</td><td><b>Chosen one.</b><br>Justin Fields <span style='color:var(--ink-3)'>QB</span></td><td><b>Remember the raiders</b><br>2026 4th <span style='color:var(--ink-3)'>(Chosen one.)</span></td></tr>
+      <tr><td class='d'>Aug 15</td><td><b>Brute Force Attack</b><br>2029 4th <span style='color:var(--ink-3)'>(CeeDees TDs)</span></td><td><b>CeeDees TDs</b><br>Cooper Kupp <span style='color:var(--ink-3)'>WR</span></td></tr>
+      <tr><td class='d'>Aug 27</td><td><b>Remember the raiders</b><br>Tyrone Tracy <span style='color:var(--ink-3)'>RB</span></td><td><b>Child Support 💸</b><br>Drew Allar <span style='color:var(--ink-3)'>QB</span></td></tr>
+      <tr><td class='d'>Sep 4</td><td><b>Chosen one.</b><br>James Cook <span style='color:var(--ink-3)'>RB</span></td><td><b>CeeDees TDs</b><br>Christian McCaffrey <span style='color:var(--ink-3)'>RB</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <section>
+    <h2><span class="kicker">Off the wire</span>Five pickups worth watching</h2>
+    <p class="dek">Managers added <b>87</b> players off free agency and waivers since March.
+    Only <b>35</b> are still on the roster that claimed them. Three of those start in week 1.</p>
     <div class="panel brief">
-      <p><b>Do it to them scored 67.50.</b> Lowest in the league and the only team that
-      lost to every other score on the board. It gets Bo Nix and RJ Harvey Monday night, worth a
-      projected <b>32.10</b>, which would put it near <b>99.60</b> and out of last. This
-      was the team carrying one startable quarterback into the season. That bill came in week 1.</p>
+      <p><b>1. Darren Waller, TE, to The Comeback Kid.</b> Claimed August 12 and up
+      <b>678</b> in thirty days. He projects <b>13.5</b> points a week, more than
+      any other player picked up off the wire in this league, and he starts at flex on Sunday. A
+      33-year-old tight end nobody wanted is now the <b>4th</b>-highest projected scorer on the
+      roster, and he cost nothing. Seven trades chased what a waiver claim delivered.</p>
 
-      <p><b>Vick2times scored 73.07 with everything already played.</b> Kyler Murray threw
-      five passes and left with a concussion for 0.80. Colston Loveland and Romeo Doubs both
-      finished on zero. Three of nine starters gave Vick2times under a point. The other six
-      combined for 72.27. Nobody on the roster reached 16.</p>
+      <p><b>2. Chris Brooks, RB, to Bay Area Party Supplies.</b> Claimed August 30, and he
+      starts at running back in week 1 for the 5th-ranked
+      roster in the league. He projects <b>6.8</b> a week. That is
+      not a knock on Brooks. It is what a backfield looks like behind Ashton Jeanty.</p>
 
-      <p><b>TexasTimeshifts left 54.00 points on the bench through Sunday.</b> Most in
-      the league. Mike Gesicki scored 25.80 and Kyle Monangai scored 22.10 sitting down,
-      and either one alone would have outscored every TexasTimeshifts starter. The team scored
-      93.34 and lost by 34.23. That one is on the lineup card, not the roster.</p>
+      <p><b>3. Jalon Daniels, QB, to Child Support.</b> Claimed August 25 and up
+      <b>494</b>, the biggest quarterback gain of anyone taken off the wire. He projects
+      nothing yet. But this is a 2QB league where two teams cannot fill the ninth slot, and a free
+      quarterback with a pulse is the most valuable thing on this list.</p>
 
-      <p><b>Chosen one. has Isaiah Likely’s 36.60 on its bench.</b> Second best tight end line
-      of the week, anywhere. The tight end slot went to Travis Kelce, who plays Monday night and
-      projects 12.19. Chosen one. won by 55.76 regardless, so the cost was nothing. It
-      will not be nothing in October.</p>
+      <p><b>4. Tyreek Hill, WR, to The Comeback Kid.</b> Claimed August 29 for nothing, the
+      biggest name to change hands all summer without a trade. He projects <b>zero</b> points right now.
+      Either the best free bet in the league or a roster spot burned on a name. Watch this one.</p>
 
-      <p><b>Sam Darnold played five snaps.</b> Two attempts, 13 yards, out with a hip.
-      0.23 points from a starting quarterback slot. Brute Force Attack still scored
-      128.90, sixth most in the league, and lost anyway. It drew the
-      highest score of the week.</p>
+      <p><b>5. Jacob Saylors, RB, to Chosen one.</b> Claimed August 31 and up
+      <b>523</b>, the sharpest riser added in the last two weeks. He projects
+      <b>5.0</b> a week on the oldest roster in the league, which is the one place a cheap
+      young back has somewhere to go.</p>
     </div>
   </section>
 
 
   <section>
-    <h2><span class="kicker">The surprises</span>What the projection missed</h2>
-    <p class="dek">Preseason projection was each roster’s best legal lineup averaged over fourteen
-    weeks. Week 1 is what they actually started and actually scored. Sorted by the gap.</p>
-
-    <div class="scroll">
-      <table class="tbl">
-        <thead><tr><th>Team</th><th class="num">Proj. rank</th><th class="num">Proj. pts/wk</th>
-        <th class="num">Week 1 pts</th><th class="num">Gap</th><th class="num">Week 1 rank</th></tr></thead>
-        <tbody>
-      <tr><td class='who'>Bay Area Party Supplies<br><span class='d'>JPuente1</span></td><td class='num'>5</td><td class='num'>163.3</td><td class='num'><b>197.20</b></td><td class='num' style='color:var(--easy)'>+33.90</td><td class='num'>1</td></tr>
-      <tr><td class='who'>SlickBears<br><span class='d'>TreyF3</span></td><td class='num'>7</td><td class='num'>153.9</td><td class='num'><b>165.27</b></td><td class='num' style='color:var(--easy)'>+11.37</td><td class='num'>5</td></tr>
-      <tr><td class='who'>The Comeback Kid<br><span class='d'>JoshuaR23</span></td><td class='num'>15</td><td class='num'>107.6</td><td class='num'><b>114.46</b></td><td class='num' style='color:var(--easy)'>+6.86</td><td class='num'>9</td></tr>
-      <tr><td class='who'>Child Support 💸 &dagger;<br><span class='d'>PrimeTimeJG</span></td><td class='num'>3</td><td class='num'>181.9</td><td class='num'><b>177.35</b></td><td class='num' style='color:var(--hard)'>-4.55</td><td class='num'>4</td></tr>
-      <tr><td class='who'>The People’s Champ<br><span class='d'>GerCllz</span></td><td class='num'>2</td><td class='num'>197.0</td><td class='num'><b>190.84</b></td><td class='num' style='color:var(--hard)'>-6.16</td><td class='num'>2</td></tr>
-      <tr><td class='who'>bLuE BaLLeRs &dagger;<br><span class='d'>RayRod94</span></td><td class='num'>11</td><td class='num'>139.7</td><td class='num'><b>127.57</b></td><td class='num' style='color:var(--hard)'>-12.13</td><td class='num'>8</td></tr>
-      <tr><td class='who'>Loud and Stroud<br><span class='d'>Zaiah2000</span></td><td class='num'>16</td><td class='num'>106.3</td><td class='num'><b>91.13</b></td><td class='num' style='color:var(--hard)'>-15.17</td><td class='num'>13</td></tr>
-      <tr><td class='who'>Blue Tent All-Stars<br><span class='d'>SmokeySupremacy</span></td><td class='num'>14</td><td class='num'>123.8</td><td class='num'><b>107.86</b></td><td class='num' style='color:var(--hard)'>-15.94</td><td class='num'>10</td></tr>
-      <tr><td class='who'>CeeDees TDs<br><span class='d'>NickBowens</span></td><td class='num'>1</td><td class='num'>201.1</td><td class='num'><b>180.47</b></td><td class='num' style='color:var(--hard)'>-20.63</td><td class='num'>3</td></tr>
-      <tr><td class='who'>Brute Force Attack<br><span class='d'>efuentesjr</span></td><td class='num'>6</td><td class='num'>154.2</td><td class='num'><b>128.90</b></td><td class='num' style='color:var(--hard)'>-25.30</td><td class='num'>6</td></tr>
-      <tr><td class='who'>Remember the raiders<br><span class='d'>raidersfantasy</span></td><td class='num'>10</td><td class='num'>141.7</td><td class='num'><b>101.70</b></td><td class='num' style='color:var(--hard)'>-40.00</td><td class='num'>11</td></tr>
-      <tr><td class='who'>Chosen one. &dagger;<br><span class='d'>Fristoe</span></td><td class='num'>4</td><td class='num'>174.4</td><td class='num'><b>128.83</b></td><td class='num' style='color:var(--hard)'>-45.57</td><td class='num'>7</td></tr>
-      <tr><td class='who'>Demboyz<br><span class='d'>88boyz11</span></td><td class='num'>9</td><td class='num'>142.9</td><td class='num'><b>90.90</b></td><td class='num' style='color:var(--hard)'>-52.00</td><td class='num'>14</td></tr>
-      <tr><td class='who'>TexasTimeshifts &dagger;<br><span class='d'>TexasTimeshifts</span></td><td class='num'>8</td><td class='num'>152.8</td><td class='num'><b>93.34</b></td><td class='num' style='color:var(--hard)'>-59.46</td><td class='num'>12</td></tr>
-      <tr><td class='who'>Vick2times<br><span class='d'>vick2times</span></td><td class='num'>13</td><td class='num'>136.4</td><td class='num'><b>73.07</b></td><td class='num' style='color:var(--hard)'>-63.33</td><td class='num'>15</td></tr>
-      <tr><td class='who'>Do it to them &dagger;<br><span class='d'>CarlosMalagon</span></td><td class='num'>12</td><td class='num'>137.8</td><td class='num'><b>67.50</b></td><td class='num' style='color:var(--hard)'>-70.30</td><td class='num'>16</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="dek" style="margin-top:10px">Gap is week 1 points minus the projection. A dagger means
-    that team still has a starter in Monday night’s game, so its gap will close.</p>
-
-    <div class="panel brief" style="margin-top:18px">
-      <p><b>Three teams beat their number. Thirteen did not.</b> A projection built on best legal
-      lineups was always going to run high, because nobody starts their best lineup. The league
-      started <b>84.1%</b> of the points available to it and left
-      <b>370.02</b> on benches.</p>
-
-      <p><b>The Comeback Kid was projected 15th of 16 and scored ninth.</b> Dallas Goedert gave it
-      27.40 and its two quarterbacks gave it 40.86. It still
-      lost to CeeDees TDs by 66.01. Seven trades bought a roster that is competitive on the
-      weeks nothing goes wrong.</p>
-
-      <p><b>Demboyz fell the furthest.</b> Projected ninth, scored 90.90, which was
-      14th. It started nine players and none of them reached 19. That is the whole story: no injury,
-      no bad call, just a roster with no top end. Jared Goff was its leading scorer at 18.77.</p>
-
-      <p><b>Five rows are not finished.</b> Chosen one. gets Patrick Mahomes and Travis Kelce
-      Monday night. Child Support gets Kenneth Walker and Rashee Rice. Do it to them gets Bo Nix and
-      RJ Harvey, bLuE BaLLeRs gets J.K. Dobbins, TexasTimeshifts gets Jaylen Waddle. Read those rows
-      again on Tuesday.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2><span class="kicker">The trends</span>The old rosters scored. The young ones did not.</h2>
-    <p class="dek">Teams in week 1 scoring order. Under-24 share is the percentage of a roster’s
-    trade value held by players under 24. Beat is how many of the other fifteen scores that team’s
-    total would have beaten.</p>
-
-    <div class="scroll">
-      <table class="tbl">
-        <thead><tr><th class="num">Rank</th><th>Team</th><th class="num">Week 1 pts</th>
-        <th class="num">Under-24 value</th><th class="num">Avg. age</th><th class="num">Beat</th></tr></thead>
-        <tbody>
-      <tr><td class='num' style='color:var(--ink-3)'>1</td><td class='who'>Bay Area Party Supplies</td><td class='num'><b>197.20</b></td><td class='num' style='color:'>27%</td><td class='num'>25.0</td><td class='num'>15 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>2</td><td class='who'>The People’s Champ</td><td class='num'><b>190.84</b></td><td class='num' style='color:'>0%</td><td class='num'>25.8</td><td class='num'>14 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>3</td><td class='who'>CeeDees TDs</td><td class='num'><b>180.47</b></td><td class='num' style='color:'>1%</td><td class='num'>26.6</td><td class='num'>13 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>4</td><td class='who'>Child Support 💸</td><td class='num'><b>177.35</b></td><td class='num' style='color:'>31%</td><td class='num'>25.2</td><td class='num'>12 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>5</td><td class='who'>SlickBears</td><td class='num'><b>165.27</b></td><td class='num' style='color:'>20%</td><td class='num'>26.5</td><td class='num'>11 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>6</td><td class='who'>Brute Force Attack</td><td class='num'><b>128.90</b></td><td class='num' style='color:'>29%</td><td class='num'>27.3</td><td class='num'>10 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>7</td><td class='who'>Chosen one.</td><td class='num'><b>128.83</b></td><td class='num' style='color:'>0%</td><td class='num'>27.5</td><td class='num'>9 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>8</td><td class='who'>bLuE BaLLeRs</td><td class='num'><b>127.57</b></td><td class='num' style='color:'>23%</td><td class='num'>26.4</td><td class='num'>8 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>9</td><td class='who'>The Comeback Kid</td><td class='num'><b>114.46</b></td><td class='num' style='color:var(--hard)'>48%</td><td class='num'>26.0</td><td class='num'>7 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>10</td><td class='who'>Blue Tent All-Stars</td><td class='num'><b>107.86</b></td><td class='num' style='color:var(--hard)'>59%</td><td class='num'>23.7</td><td class='num'>6 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>11</td><td class='who'>Remember the raiders</td><td class='num'><b>101.70</b></td><td class='num' style='color:'>24%</td><td class='num'>25.8</td><td class='num'>5 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>12</td><td class='who'>TexasTimeshifts</td><td class='num'><b>93.34</b></td><td class='num' style='color:'>15%</td><td class='num'>26.3</td><td class='num'>4 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>13</td><td class='who'>Loud and Stroud</td><td class='num'><b>91.13</b></td><td class='num' style='color:var(--hard)'>50%</td><td class='num'>24.3</td><td class='num'>3 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>14</td><td class='who'>Demboyz</td><td class='num'><b>90.90</b></td><td class='num' style='color:var(--hard)'>47%</td><td class='num'>25.3</td><td class='num'>2 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>15</td><td class='who'>Vick2times</td><td class='num'><b>73.07</b></td><td class='num' style='color:var(--hard)'>50%</td><td class='num'>23.7</td><td class='num'>1 of 15</td></tr>
-      <tr><td class='num' style='color:var(--ink-3)'>16</td><td class='who'>Do it to them</td><td class='num'><b>67.50</b></td><td class='num' style='color:'>29%</td><td class='num'>25.8</td><td class='num'>0 of 15</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="panel brief" style="margin-top:18px">
-      <p><b>1. The young teams finished where they were told to finish.</b> A week ago this page said
-      every one of the top eight rosters had 31% or less of its value under 24, and all four of the
-      bottom four had 48% or more. Week 1 did the same thing. The eight highest scores all came from
-      teams at <b>31%</b> or less. All <b>five</b> teams at 40% or more
-      finished in the bottom eight. Young rosters averaged <b>95.48</b>. Rosters at 25% or
-      less averaged <b>141.15</b>. One week is one week, but the shape is not an accident.</p>
-
-      <p><b>2. Running backs won the day, quarterbacks won the format.</b> Running backs put up
-      <b>690.70</b> points across 47 starts, more than any other
-      position. Quarterbacks scored the most per start at <b>18.80</b>, which is
-      what a league paying 0.3 a completion looks like. Child Support got
-      <b>66.70</b> from two quarterbacks. Vick2times got
-      <b>14.77</b> from two. That is the spread in one position group,
-      in one week.</p>
-
-      <p><b>3. Three teams still cannot fill the ninth slot with a quarterback.</b> SlickBears,
-      Loud and Stroud and Do it to them all started one. SlickBears got away with it because Trey
-      McBride and a 66.9-point receiver room covered for Matthew Stafford. The other two scored
-      <b>91.13</b> and <b>67.50</b>, 13th and
-      16th. The trade deadline is week 9.</p>
-
-      <p><b>4. The tight end premium is real and badly distributed.</b> Tight ends produced
-      <b>226.20</b> points on 20 starts. The Comeback Kid started
-      three and got <b>48.70</b>, most in the league.
-      <b>Three teams got zero</b> from the position: Chosen one., Remember the raiders and
-      Vick2times. Kyle Pitts and Colston Loveland caught nothing. Travis Kelce has not played.</p>
-    </div>
-  </section>
-
-
-  <section>
-    <h2><span class="kicker">The injury wire</span>Six players started Sunday and are now out</h2>
-    <p class="dek">Every player who was in an MFFL starting lineup this week and now carries an Out
-    or injured reserve designation with a listed injury.</p>
-
-    <div class="scroll">
-      <table class="tbl">
-        <thead><tr><th>Player</th><th>Status</th><th class="num">Week 1 pts</th><th>Roster</th></tr></thead>
-        <tbody>
-      <tr><td class='who'>Zay Flowers<br><span class='d'>WR &middot; BAL</span></td><td>Out<br><span class='d'>Hamstring</span></td><td class='num'>26.90</td><td>SlickBears</td></tr>
-      <tr><td class='who'>A.J. Brown<br><span class='d'>WR &middot; NE</span></td><td>IR<br><span class='d'>Ankle</span></td><td class='num'>5.60</td><td>Remember the raiders</td></tr>
-      <tr><td class='who'>Dylan Sampson<br><span class='d'>RB &middot; CLE</span></td><td>Out<br><span class='d'>Knee</span></td><td class='num'>3.20</td><td>Blue Tent All-Stars</td></tr>
-      <tr><td class='who'>Ja'Kobi Lane<br><span class='d'>WR &middot; BAL</span></td><td>Out<br><span class='d'>Wrist</span></td><td class='num'>2.10</td><td>The Comeback Kid</td></tr>
-      <tr><td class='who'>Kyler Murray<br><span class='d'>QB &middot; MIN</span></td><td>Out<br><span class='d'>Concussion</span></td><td class='num'>0.80</td><td>Vick2times</td></tr>
-      <tr><td class='who'>Sam Darnold<br><span class='d'>QB &middot; SEA</span></td><td>Out<br><span class='d'>Hip</span></td><td class='num'>0.23</td><td>Brute Force Attack</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="panel brief" style="margin-top:18px">
-      <p><b>Zay Flowers is the expensive one.</b> Five catches, 150 yards, 26.90 points, and a
-      hamstring. SlickBears won by 74.14 and lost its leading receiver doing it.
-      A.J. Brown played 31 snaps for New England, caught three for 26, and went to injured reserve
-      with an ankle. Remember the raiders started him and lost by 6.16.</p>
-
-      <p><b>Two quarterbacks did not finish.</b> Kyler Murray took a concussion after five attempts.
-      Sam Darnold left with a hip after two. Vick2times and Brute Force Attack got
-      <b>0.80</b> and <b>0.23</b> out of a starting quarterback slot. Brute Force Attack
-      owns Darnold’s replacement: Drew Lock scored <b>14.53</b> from its bench.</p>
-
-      <p><b>Last week’s watch list came back clean.</b> Seven of the fifty most valuable players in
-      this league were questionable on Wednesday. Six played. Ashton Jeanty scored 39.70,
-      Breece Hall 25.80, Jeremiyah Love 14.00, Malik Nabers 12.90, Tyler Warren
-      12.10. Ja’Marr Chase managed 3.20. Patrick Mahomes plays Monday. Not one of the
-      seven carries a designation this morning.</p>
-
-      <p><b>The league is carrying 15 players on injured reserve and 7 questionable.</b>
-      Blue Tent All-Stars has four on reserve, the most of any roster, all of them players it was
-      counting on for 2028. That is the risk in the plan, and it arrived early.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2><span class="kicker">Off the wire</span>The trade block opened Sunday night</h2>
-    <p class="dek">Two managers listed players within hours of each other. One had a bad game.
-    The other had the best tight end game of the week.</p>
-
+    <h2><span class="kicker">Around the league</span>Three things worth watching</h2>
+    <p class="byline">Notes &middot; Week one</p>
     <div class="panel brief">
-      <p><b>Chosen one. listed Rico Dowdle.</b> Eight carries, 15 yards, two catches for six, and
-      <b>4.10</b> points out of a starting flex. The listing went up about 17 hours later,
-      alongside its 2028 first and 2028 second. Chosen one. won by 55.76 and still went
-      shopping. Dowdle was the weakest starter on a winning roster, and that is usually enough.</p>
+      <p><b>1. Two teams cannot fill the superflex slot. One team has four quarterbacks.</b>
+      This is a 2QB league. The ninth starting spot takes a QB, and 14 of 16 teams put one there.
+      Loud and Stroud does not have a second startable quarterback, so the slot goes to
+      <b>Devaughn Vele</b>, a receiver, for 10.4 points. Do it to them uses <b>Aaron Jones</b>, a
+      running back, for 12.8. The typical team gets 18.7 from that slot. That is
+      <b>8.3</b> and <b>5.8</b> points a week, every week, for fourteen weeks.
+      Remember the raiders is carrying <b>4</b> startable quarterbacks and can play two.
+      The deadline is week 9.</p>
 
-      <p><b>The Comeback Kid listed Dallas Goedert.</b> Four catches, 77 yards, two touchdowns,
-      <b>27.40</b> points, the second best tight end line of the week. Selling after the best
-      game is the harder call and the more defensible one. Goedert is 31. The Comeback Kid has
-      <b>48%</b> of its value in players under 24 and the best tight end
-      room in the league at 48.70 points. It can afford to.</p>
+      <p><b>2. The tight end premium is running this league.</b> MFFL pays a tight end 0.6 per catch
+      and a full point per first down. Managers noticed. <b>9 of 16</b> teams project to start
+      two or more tight ends in week 1, and <b>Blue Tent All-Stars and The Comeback Kid</b> start three. It is why
+      The Comeback Kid, 15th overall, still has the best
+      tight end room in the league at 54.0 points a week. And
+      why Loud and Stroud's 12.1 costs so much.</p>
 
-      <p><b>The league changed its scoring on Friday.</b> The competition committee voted in kick and
-      punt return yards at <b>1 point per 20</b>. The commissioner flagged Deebo Samuel as the only
-      affected starter, which was correct when he wrote it: one game had been played. By Sunday
-      night <b>seven starters</b> had return yards, worth <b>14.65</b> points in total. Samuel
-      got 3.70 of his 22.70 that way. Woody Marks got 3.90 of 12.90.</p>
-
-      <p><b>The best return week belonged to a bench.</b> Seth McGowan returned 164 yards for
-      Loud and Stroud, worth <b>8.20</b> under the new rule and 9.20 in total. He sat.
-      Loud and Stroud lost by 74.14. KaVontae Turpin returned 122 for Demboyz and also sat.
-      The rule is new, the rosters have not caught up, and week 2 is the first one anybody sets a
-      lineup for knowing it exists.</p>
-
-      <p><b>Four roster moves since Friday, all of them small.</b> Blue Tent All-Stars dropped
-      Jaydon Blue for Dohnte Meyers, then dropped Malik Davis off injured reserve. Remember the
-      raiders dropped Tanner Koziol. Nobody has spent waiver money yet. The first in-season waiver
-      run is Wednesday, and Do it to them takes <b>$636</b> into it, most
-      in the league.</p>
+      <p><b>3. The market moved hard on the rookies.</b> Biggest 30-day riser on any roster:
+      <b>Mike Washington</b>, RB for SlickBears, up <b>877</b>. Biggest faller:
+      <b>Cam Ward</b>, QB for Vick2times, down <b>712</b>. Four of the six
+      steepest declines are players drafted in the last two rookie classes. September is when camp hype
+      meets the depth chart.</p>
     </div>
   </section>
 
+
   <section>
-    <h2><span class="kicker">The report</span>All sixteen, in scoring order</h2>
-    <p class="dek">Week 1 points by position group. Beat is how many of the other fifteen scores that
-    team’s total would have beaten. Gap to projection is week 1 points minus the preseason weekly
-    number.</p>
+    <h2><span class="kicker">The report</span>All sixteen, in projected order</h2>
+    <p class="dek">Where each team's points come from. Numbers are points per week, averaged across
+    weeks 1 to 14.</p>
     <div class="legend" style="margin-bottom:18px">
       <span><i style="background:var(--qb)"></i>Quarterback</span>
       <span><i style="background:var(--rb)"></i>Running back</span>
@@ -697,377 +569,377 @@
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">1</div>
-          <div><div class="cap-nm">Bay Area Party Supplies<small>JPuente1 &middot; division 4</small></div></div>
-          <div class="cap-ppg"><b>197.20</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">CeeDees TDs<small>NickBowens &middot; division 4</small></div></div>
+          <div class="cap-ppg"><b>201.1</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Week one belonged to them</div>
-        <span class="bar"><i style='flex:0.3093;background:var(--qb)'>61.0</i><i style='flex:0.2211;background:var(--rb)'>43.6</i><i style='flex:0.4082;background:var(--wr)'>80.5</i><i style='flex:0.0614;background:var(--te)'>12.1</i></span>
-        <p>Highest score in the league at <b>197.20</b> and it beat all fifteen other
-totals. Caleb Williams threw for 269 yards and two scores and ran for two more, worth
-<b>41.07</b>. Ashton Jeanty added <b>39.70</b>, and the receiver
-room added <b>80.50</b>, most of any team. It was projected <b>5th</b> and beat that
-number by <b>33.90</b>, the biggest jump in the league. It also left only <b>7.90</b> points
-on the bench. Best roster decision and best lineup decision in the same week.</p>
+        <div class="cap-tag">All in</div>
+        <span class="bar"><i style='flex:0.2256;background:var(--qb)'>45.4</i><i style='flex:0.3961;background:var(--rb)'>79.7</i><i style='flex:0.1917;background:var(--wr)'>38.6</i><i style='flex:0.1866;background:var(--te)'>37.5</i></span>
+        <p>Best roster in the league, shortest runway. Jahmyr Gibbs, Christian McCaffrey and Kyren Williams
+start together. Lamar Jackson and Jalen Hurts fill both quarterback slots. It projects
+<b>201.1</b>, or 4.1 clear of second, and ranks
+1st at quarterback and 2nd at running back. Only
+<b>1%</b> of the value is under 24. McCaffrey arrived Friday from Chosen one.
+for James Cook, swapping a 26-year-old back for a 30-year-old. That is a win-now team acting like one.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 197.20 to 128.90</b></span>
-          <span>Opponent <b>Brute Force Attack</b></span>
-          <span>Beat <b>15 of 15</b></span>
-          <span>Proj. rank <b>5</b></span>
-          <span>Gap to proj. <b>+33.90</b></span>
-          <span>Bench points left <b>7.90</b></span>
-          <span>Waiver money <b>$166</b></span>
-          
+          <span>Age <b>26.6</b></span>
+          <span>Under-24 value <b>1%</b></span>
+          <span>Roster value <b>68.9k</b></span>
+          <span>Trades <b>3</b></span>
+          <span>Wire moves <b>18</b></span>
+          <span>2027+28 firsts <b>2</b></span>
+          <span>Week 1 <b>vs The Comeback Kid</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">2</div>
           <div><div class="cap-nm">The People’s Champ<small>GerCllz &middot; division 2</small></div></div>
-          <div class="cap-ppg"><b>190.84</b><small>week 1 points</small></div>
+          <div class="cap-ppg"><b>197.0</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Won without its best player</div>
-        <span class="bar"><i style='flex:0.2334;background:var(--qb)'>44.5</i><i style='flex:0.6084;background:var(--rb)'>116.1</i><i style='flex:0.0828;background:var(--wr)'>15.8</i><i style='flex:0.0755;background:var(--te)'>14.4</i></span>
-        <p>Scored <b>190.84</b> and won by <b>99.94</b> while Ja’Marr Chase, the
-fourth most valuable player in this league, caught two balls for <b>3.20</b>. The backfield delivered
-<b>116.10</b>, most in the league, on Bijan Robinson, D’Andre Swift and Jonathan Taylor. It left
-<b>25.90</b> on the bench, including Pat Freiermuth at 20.60 and Ladd McConkey at 19.20.
-Depth is the whole plan and the plan worked.</p>
+        <div class="cap-tag">The richest roster</div>
+        <span class="bar"><i style='flex:0.1929;background:var(--qb)'>38.0</i><i style='flex:0.4876;background:var(--rb)'>96.1</i><i style='flex:0.2020;background:var(--wr)'>39.8</i><i style='flex:0.1175;background:var(--te)'>23.2</i></span>
+        <p><b>82.4k</b> in trade value, 14.9k clear of the field.
+The backfield of Bijan Robinson, Jonathan Taylor, D'Andre Swift and Jaylen Warren projects
+<b>96.1</b> points a week. No team in this league gets more out of any position group. Ja'Marr Chase and
+Puka Nacua are the receivers. None of it is under 24. Tight end is the soft spot at 23.2,
+12th in a league that pays a premium there. The schedule is the
+league's hardest.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 190.84 to 90.90</b></span>
-          <span>Opponent <b>Demboyz</b></span>
-          <span>Beat <b>14 of 15</b></span>
-          <span>Proj. rank <b>2</b></span>
-          <span>Gap to proj. <b>-6.16</b></span>
-          <span>Bench points left <b>25.90</b></span>
-          <span>Waiver money <b>$355</b></span>
-          
+          <span>Age <b>25.8</b></span>
+          <span>Under-24 value <b>0%</b></span>
+          <span>Roster value <b>82.4k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>22</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Demboyz</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">3</div>
-          <div><div class="cap-nm">CeeDees TDs<small>NickBowens &middot; division 4</small></div></div>
-          <div class="cap-ppg"><b>180.47</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Child Support 💸<small>PrimeTimeJG &middot; division 2</small></div></div>
+          <div class="cap-ppg"><b>181.9</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Gibbs did half of it</div>
-        <span class="bar"><i style='flex:0.2979;background:var(--qb)'>53.8</i><i style='flex:0.4372;background:var(--rb)'>78.9</i><i style='flex:0.2438;background:var(--wr)'>44.0</i><i style='flex:0.0211;background:var(--te)'>3.8</i></span>
-        <p><b>45.60</b> of its <b>180.47</b> came from Jahmyr Gibbs. Lamar Jackson and
-Jalen Hurts added <b>53.77</b> between them. Jordan Addison started and caught nothing. It won by
-<b>66.01</b> anyway and sat third in scoring. The preseason number was <b>201.1</b> and it came
-in <b>20.63</b> under, which is the one thing to watch on a roster with no runway.</p>
+        <div class="cap-tag">Built off the wire</div>
+        <span class="bar"><i style='flex:0.2031;background:var(--qb)'>36.9</i><i style='flex:0.2679;background:var(--rb)'>48.7</i><i style='flex:0.2774;background:var(--wr)'>50.4</i><i style='flex:0.2516;background:var(--te)'>45.8</i></span>
+        <p><b>30</b> waiver and free agent moves, most in the league. 1 trade. He built this
+on the wire, and it shows: there is no hole anywhere on the roster. Nothing scores under
+<b>36.9</b> points a week. Brock Bowers headlines the
+2nd-best tight end production and 3rd-best
+receiving. At <b>31%</b> under 24, it is the only top-four roster with a second act.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 180.47 to 114.46</b></span>
-          <span>Opponent <b>The Comeback Kid</b></span>
-          <span>Beat <b>13 of 15</b></span>
-          <span>Proj. rank <b>1</b></span>
-          <span>Gap to proj. <b>-20.63</b></span>
-          <span>Bench points left <b>11.00</b></span>
-          <span>Waiver money <b>$616</b></span>
-          
+          <span>Age <b>25.2</b></span>
+          <span>Under-24 value <b>31%</b></span>
+          <span>Roster value <b>67.4k</b></span>
+          <span>Trades <b>1</b></span>
+          <span>Wire moves <b>30</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Do it to them</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">4</div>
-          <div><div class="cap-nm">Child Support 💸<small>PrimeTimeJG &middot; division 2</small></div></div>
-          <div class="cap-ppg"><b>177.35</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Chosen one.<small>Fristoe &middot; division 1</small></div></div>
+          <div class="cap-ppg"><b>174.4</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">The wire keeps paying</div>
-        <span class="bar"><i style='flex:0.3761;background:var(--qb)'>66.7</i><i style='flex:0.0710;background:var(--rb)'>12.6</i><i style='flex:0.4096;background:var(--wr)'>72.7</i><i style='flex:0.1432;background:var(--te)'>25.4</i></span>
-        <p><b>66.70</b> points from Jaxson Dart and Bryce Young, most any team got
-from quarterbacks. Justin Jefferson added 31.30. It scored <b>177.35</b> with Kenneth Walker and
-Rashee Rice still to play Monday night, worth a projected <b>33.32</b> more. Christian Watson scored
-33.50 on its bench, which is how a team leaves <b>44.45</b> points behind and still wins by
-109.85.</p>
+        <div class="cap-tag">Old, and fine with it</div>
+        <span class="bar"><i style='flex:0.2398;background:var(--qb)'>41.8</i><i style='flex:0.3764;background:var(--rb)'>65.6</i><i style='flex:0.1673;background:var(--wr)'>29.2</i><i style='flex:0.2166;background:var(--te)'>37.8</i></span>
+        <p>Oldest roster in the league at <b>27.5</b>, with <b>0%</b> under 24.
+Josh Allen and Patrick Mahomes is the most expensive quarterback pairing anyone assembled, worth
+41.8 points a week, 2nd in the league. Friday's trade sent McCaffrey
+out for James Cook, four years younger. That is the first move all year that acknowledged 2028. Receiver
+is the hole at 29.2. The schedule is the reward: second-easiest overall, and it softens from
+120.9 to 102.0 after week 7.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 177.35 to 67.50</b></span>
-          <span>Opponent <b>Do it to them</b></span>
-          <span>Beat <b>12 of 15</b></span>
-          <span>Proj. rank <b>3</b></span>
-          <span>Gap to proj. <b>-4.55</b></span>
-          <span>Bench points left <b>44.45</b></span>
-          <span>Waiver money <b>$449</b></span>
-          <span>Monday night <b>Kenneth Walker, Rashee Rice</b></span>
+          <span>Age <b>27.5</b></span>
+          <span>Under-24 value <b>0%</b></span>
+          <span>Roster value <b>51.0k</b></span>
+          <span>Trades <b>3</b></span>
+          <span>Wire moves <b>17</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Vick2times</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">5</div>
-          <div><div class="cap-nm">SlickBears<small>TreyF3 &middot; division 3</small></div></div>
-          <div class="cap-ppg"><b>165.27</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Bay Area Party Supplies<small>JPuente1 &middot; division 4</small></div></div>
+          <div class="cap-ppg"><b>163.3</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">One quarterback, no problem</div>
-        <span class="bar"><i style='flex:0.0343;background:var(--qb)'>5.7</i><i style='flex:0.3497;background:var(--rb)'>57.8</i><i style='flex:0.4048;background:var(--wr)'>66.9</i><i style='flex:0.2112;background:var(--te)'>34.9</i></span>
-        <p>Won by <b>74.14</b> starting one quarterback. Matthew Stafford gave it
-<b>5.67</b> and the ninth slot went to Mike Washington for 5.10. It did not matter, because Trey
-McBride went for <b>34.90</b> and the receivers added <b>66.90</b>. Beat its projection by
-<b>11.37</b>, second best in the league. Then Zay Flowers pulled a hamstring.</p>
+        <div class="cap-tag">Best position in the league</div>
+        <span class="bar"><i style='flex:0.2457;background:var(--qb)'>40.1</i><i style='flex:0.2208;background:var(--rb)'>36.1</i><i style='flex:0.3970;background:var(--wr)'>64.8</i><i style='flex:0.1364;background:var(--te)'>22.3</i></span>
+        <p><b>6 first-round picks</b> in 2027 and 2028. Two 24-year-old franchise quarterbacks in
+Drake Maye and Caleb Williams. The league's best receiver room at <b>64.8</b> points a week. And
+a 5th-place projection. Nobody else has all four. The weakness is RB2: behind Ashton Jeanty
+the week 1 lineup drops to Chris Brooks at 6.7. With this much capital, that is a phone call.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 165.27 to 91.13</b></span>
-          <span>Opponent <b>Loud and Stroud</b></span>
-          <span>Beat <b>11 of 15</b></span>
-          <span>Proj. rank <b>7</b></span>
-          <span>Gap to proj. <b>+11.37</b></span>
-          <span>Bench points left <b>9.60</b></span>
-          <span>Waiver money <b>$200</b></span>
-          
+          <span>Age <b>25.0</b></span>
+          <span>Under-24 value <b>27%</b></span>
+          <span>Roster value <b>67.5k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>25</b></span>
+          <span>2027+28 firsts <b>6</b></span>
+          <span>Week 1 <b>vs Brute Force Attack</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">6</div>
           <div><div class="cap-nm">Brute Force Attack<small>efuentesjr &middot; division 4</small></div></div>
-          <div class="cap-ppg"><b>128.90</b><small>week 1 points</small></div>
+          <div class="cap-ppg"><b>154.2</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Best score to lose</div>
-        <span class="bar"><i style='flex:0.1707;background:var(--qb)'>22.0</i><i style='flex:0.6051;background:var(--rb)'>78.0</i><i style='flex:0.1435;background:var(--wr)'>18.5</i><i style='flex:0.0807;background:var(--te)'>10.4</i></span>
-        <p>Scored <b>128.90</b>, sixth most in the league, and lost. It drew Bay Area
-Party Supplies. Derrick Henry, 32 years old, went 24 carries for 144 yards and three touchdowns,
-worth <b>39.30</b>. Breece Hall added <b>25.80</b>. Sam
-Darnold left after two attempts for <b>0.23</b> while Drew Lock, his replacement in Seattle and on this
-roster, scored <b>14.53</b> from the bench. It left <b>37.85</b> points there in total.</p>
+        <div class="cap-tag">Henry at 32</div>
+        <span class="bar"><i style='flex:0.2450;background:var(--qb)'>37.8</i><i style='flex:0.4799;background:var(--rb)'>74.0</i><i style='flex:0.1872;background:var(--wr)'>28.9</i><i style='flex:0.0879;background:var(--te)'>13.6</i></span>
+        <p>Derrick Henry is 32 and still leading a backfield worth <b>74.0</b> points a week,
+3rd in the league, with Breece Hall and 22-year-old Quinshon Judkins
+behind him. Joe Burrow anchors the quarterbacks. April's trade sent a 2027 first to The Comeback Kid for
+Sam Darnold and Drew Lock. Five months on that looks expensive: a first spent on quarterback depth by a
+team that had Burrow. It leaves <b>1</b> first across the next two drafts. Tight end is
+15th at 13.6.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 128.90 to 197.20</b></span>
-          <span>Opponent <b>Bay Area Party Supplies</b></span>
-          <span>Beat <b>10 of 15</b></span>
-          <span>Proj. rank <b>6</b></span>
-          <span>Gap to proj. <b>-25.30</b></span>
-          <span>Bench points left <b>37.85</b></span>
-          <span>Waiver money <b>$165</b></span>
-          
+          <span>Age <b>27.3</b></span>
+          <span>Under-24 value <b>29%</b></span>
+          <span>Roster value <b>46.4k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>22</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Bay Area Party Supplies</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">7</div>
-          <div><div class="cap-nm">Chosen one.<small>Fristoe &middot; division 1</small></div></div>
-          <div class="cap-ppg"><b>128.83</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">SlickBears<small>TreyF3 &middot; division 3</small></div></div>
+          <div class="cap-ppg"><b>153.9</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Not finished yet</div>
-        <span class="bar"><i style='flex:0.2843;background:var(--qb)'>36.6</i><i style='flex:0.5193;background:var(--rb)'>66.9</i><i style='flex:0.1964;background:var(--wr)'>25.3</i><i style='flex:0.0000;background:var(--te)'>0.0</i></span>
-        <p>Won by <b>55.76</b> and is not done. Patrick Mahomes and Travis Kelce both play
-Monday night, worth a projected <b>28.05</b> on top of <b>128.83</b>. Josh Allen carried it with
-<b>36.63</b>. The problem is on the bench: Isaiah Likely scored <b>36.60</b> sitting down, second
-best tight end line of the week, behind a Kelce slot that had not kicked off.</p>
+        <div class="cap-tag">The quiet one</div>
+        <span class="bar"><i style='flex:0.2135;background:var(--qb)'>32.9</i><i style='flex:0.2837;background:var(--rb)'>43.7</i><i style='flex:0.3021;background:var(--wr)'>46.5</i><i style='flex:0.2007;background:var(--te)'>30.9</i></span>
+        <p>No trades and 3 waiver moves, the least active team in the league. It sits
+7th. Trey McBride is the best asset and worth more here than a generic ranking says.
+Mike Washington is the biggest 30-day riser on any roster at <b>+877</b>. Quarterback is the crack:
+32.9 points a week, 13th in the league, with 38-year-old Matthew
+Stafford in the superflex slot. Doing nothing has worked. It will not forever.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 128.83 to 73.07</b></span>
-          <span>Opponent <b>Vick2times</b></span>
-          <span>Beat <b>9 of 15</b></span>
-          <span>Proj. rank <b>4</b></span>
-          <span>Gap to proj. <b>-45.57</b></span>
-          <span>Bench points left <b>38.90</b></span>
-          <span>Waiver money <b>$355</b></span>
-          <span>Monday night <b>Patrick Mahomes, Travis Kelce</b></span>
+          <span>Age <b>26.5</b></span>
+          <span>Under-24 value <b>20%</b></span>
+          <span>Roster value <b>45.5k</b></span>
+          <span>Trades <b>0</b></span>
+          <span>Wire moves <b>3</b></span>
+          <span>2027+28 firsts <b>2</b></span>
+          <span>Week 1 <b>vs Loud and Stroud</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">8</div>
-          <div><div class="cap-nm">bLuE BaLLeRs<small>RayRod94 &middot; division 3</small></div></div>
-          <div class="cap-ppg"><b>127.57</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">TexasTimeshifts<small>TexasTimeshifts &middot; division 3</small></div></div>
+          <div class="cap-ppg"><b>152.8</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Upset of the week</div>
-        <span class="bar"><i style='flex:0.2114;background:var(--qb)'>27.0</i><i style='flex:0.2610;background:var(--rb)'>33.3</i><i style='flex:0.4821;background:var(--wr)'>61.5</i><i style='flex:0.0455;background:var(--te)'>5.8</i></span>
-        <p>A 2.8-point underdog on paper, a <b>34.23</b>-point winner on the field.
-Jalen Coker caught eight for 138 yards and two scores, worth <b>34.50</b>, and the receivers put up
-<b>61.50</b> in total. J.K.
-Dobbins still plays Monday. It left <b>28.70</b> points on the bench, David Njoku’s 16.80
-included, and did not need any of them.</p>
+        <div class="cap-tag">Steady</div>
+        <span class="bar"><i style='flex:0.2386;background:var(--qb)'>36.4</i><i style='flex:0.3256;background:var(--rb)'>49.7</i><i style='flex:0.1912;background:var(--wr)'>29.2</i><i style='flex:0.2446;background:var(--te)'>37.4</i></span>
+        <p>No trades either, and 8th. No glaring hole, no obvious ceiling. Juwan Johnson and Dalton
+Schultz give it 37.4 at tight end. Jayden Daniels leads a room that puts Aaron Rodgers in the
+superflex slot. Daniels is down 665 in 30 days. Ty Simpson is up 637, the biggest quarterback gain on any
+roster. Week 1 is the closest game on the board, 2.8 points against bLuE BaLLeRs.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 127.57 to 93.34</b></span>
-          <span>Opponent <b>TexasTimeshifts</b></span>
-          <span>Beat <b>8 of 15</b></span>
-          <span>Proj. rank <b>11</b></span>
-          <span>Gap to proj. <b>-12.13</b></span>
-          <span>Bench points left <b>28.70</b></span>
-          <span>Waiver money <b>$275</b></span>
-          <span>Monday night <b>J.K. Dobbins</b></span>
+          <span>Age <b>26.3</b></span>
+          <span>Under-24 value <b>15%</b></span>
+          <span>Roster value <b>42.7k</b></span>
+          <span>Trades <b>0</b></span>
+          <span>Wire moves <b>5</b></span>
+          <span>2027+28 firsts <b>2</b></span>
+          <span>Week 1 <b>vs bLuE BaLLeRs</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">9</div>
-          <div><div class="cap-nm">The Comeback Kid<small>JoshuaR23 &middot; division 4</small></div></div>
-          <div class="cap-ppg"><b>114.46</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Demboyz<small>88boyz11 &middot; division 2</small></div></div>
+          <div class="cap-ppg"><b>142.9</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Better than advertised</div>
-        <span class="bar"><i style='flex:0.3570;background:var(--qb)'>40.9</i><i style='flex:0.1380;background:var(--rb)'>15.8</i><i style='flex:0.0795;background:var(--wr)'>9.1</i><i style='flex:0.4255;background:var(--te)'>48.7</i></span>
-        <p>Projected <b>15th</b>, scored <b>9th</b>. Three tight ends
-produced <b>48.70</b>, most in the league, led by Dallas Goedert’s 27.40. Jacoby Brissett
-and Kirk Cousins gave it <b>40.86</b>. It ran into CeeDees TDs and lost by 66.01. Seven
-trades built something that is not last. It is also carrying three players on injured reserve.</p>
+        <div class="cap-tag">Easy schedule, old quarterbacks</div>
+        <span class="bar"><i style='flex:0.2607;background:var(--qb)'>37.3</i><i style='flex:0.1906;background:var(--rb)'>27.2</i><i style='flex:0.2707;background:var(--wr)'>38.7</i><i style='flex:0.2781;background:var(--te)'>39.7</i></span>
+        <p>88boyz11 drew the easiest schedule in the league at 110.1 opponent points a week, and holds
+<b>47%</b> of its value under 24. Jeremiyah Love, 21, is the headliner and the
+roster's steepest 30-day faller. The problem is now: running back projects <b>27.2</b>,
+14th in the league, because behind Love the lineup drops to Tank Bigsby at 8.6. Dak
+Prescott is 33. Jared Goff is 31. An easy schedule is worth about a win. It is not worth a running back.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 114.46 to 180.47</b></span>
-          <span>Opponent <b>CeeDees TDs</b></span>
-          <span>Beat <b>7 of 15</b></span>
-          <span>Proj. rank <b>15</b></span>
-          <span>Gap to proj. <b>+6.86</b></span>
-          <span>Bench points left <b>12.10</b></span>
-          <span>Waiver money <b>$380</b></span>
-          
+          <span>Age <b>25.3</b></span>
+          <span>Under-24 value <b>47%</b></span>
+          <span>Roster value <b>43.2k</b></span>
+          <span>Trades <b>1</b></span>
+          <span>Wire moves <b>10</b></span>
+          <span>2027+28 firsts <b>3</b></span>
+          <span>Week 1 <b>vs The People’s Champ</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">10</div>
-          <div><div class="cap-nm">Blue Tent All-Stars<small>SmokeySupremacy &middot; division 1</small></div></div>
-          <div class="cap-ppg"><b>107.86</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Remember the raiders<small>raidersfantasy &middot; division 1</small></div></div>
+          <div class="cap-ppg"><b>141.7</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Won the only close one</div>
-        <span class="bar"><i style='flex:0.3816;background:var(--qb)'>41.2</i><i style='flex:0.1437;background:var(--rb)'>15.5</i><i style='flex:0.3171;background:var(--wr)'>34.2</i><i style='flex:0.1576;background:var(--te)'>17.0</i></span>
-        <p>Won the only close game of the week, <b>107.86</b> to
-<b>101.70</b>, as a 17.7-point underdog. Brock Purdy led it with <b>29.53</b> and Daniel Jones added
-<b>11.63</b>. It scored <b>15.94</b> under its projection and still won. Four players sit on
-injured reserve, the most of any roster, and all four were 2028 pieces.</p>
+        <div class="cap-tag">Four quarterbacks</div>
+        <span class="bar"><i style='flex:0.2925;background:var(--qb)'>41.4</i><i style='flex:0.2622;background:var(--rb)'>37.1</i><i style='flex:0.2535;background:var(--wr)'>35.9</i><i style='flex:0.1918;background:var(--te)'>27.2</i></span>
+        <p>3rd-best quarterback production in the league at
+<b>41.4</b> points a week, from a room <b>4 startable deep</b>. Two other teams cannot fill
+the ninth slot at all. That is not depth. That is inventory, and there are two buyers before the week 9
+deadline. The rest is middling: Kyle Pitts at tight end, a receiver group leaning on 29-year-old A.J.
+Brown. August's trade for Tyrone Tracy cost Drew Allar, a 21-year-old quarterback. That is backward.</p>
         <div class="cap-meta">
-          <span>Result <b>Won 107.86 to 101.70</b></span>
-          <span>Opponent <b>Remember the raiders</b></span>
-          <span>Beat <b>6 of 15</b></span>
-          <span>Proj. rank <b>14</b></span>
-          <span>Gap to proj. <b>-15.94</b></span>
-          <span>Bench points left <b>9.85</b></span>
-          <span>Waiver money <b>$135</b></span>
-          
+          <span>Age <b>25.8</b></span>
+          <span>Under-24 value <b>24%</b></span>
+          <span>Roster value <b>40.2k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>9</b></span>
+          <span>2027+28 firsts <b>2</b></span>
+          <span>Week 1 <b>vs Blue Tent All-Stars</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">11</div>
-          <div><div class="cap-nm">Remember the raiders<small>raidersfantasy &middot; division 1</small></div></div>
-          <div class="cap-ppg"><b>101.70</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">bLuE BaLLeRs<small>RayRod94 &middot; division 3</small></div></div>
+          <div class="cap-ppg"><b>139.7</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Lost by six, lost A.J. Brown</div>
-        <span class="bar"><i style='flex:0.4326;background:var(--qb)'>44.0</i><i style='flex:0.3392;background:var(--rb)'>34.5</i><i style='flex:0.2281;background:var(--wr)'>23.2</i><i style='flex:0.0000;background:var(--te)'>0.0</i></span>
-        <p>Lost by <b>6.16</b>, the only close game on the board, and lost A.J.
-Brown to injured reserve in it. Tyler Shough and Malik Willis gave it <b>44.00</b>, fifth most in
-the league. Kyle Pitts started at tight end and caught nothing. Deshaun Watson scored <b>18.83</b> on the
-bench. Four quarterbacks, two slots, and a six-point loss.</p>
+        <div class="cap-tag">Backs, and not much else</div>
+        <span class="bar"><i style='flex:0.2472;background:var(--qb)'>34.5</i><i style='flex:0.4372;background:var(--rb)'>61.1</i><i style='flex:0.2005;background:var(--wr)'>28.0</i><i style='flex:0.1151;background:var(--te)'>16.1</i></span>
+        <p>No trades. <b>61.1</b> points a week from running back, 5th in the
+league, and <b>2 of the six biggest</b> 30-day risers on any roster:
+De&#x27;Zhaun Stribling and Rhamondre Stevenson. Tight end is 16.1,
+14th. Receivers are 28.0. In a league that pays a bonus on tight end
+catches and first downs, being this loaded at the one position with no bonus is expensive. Week 1 is the
+closest game on the board.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 101.70 to 107.86</b></span>
-          <span>Opponent <b>Blue Tent All-Stars</b></span>
-          <span>Beat <b>5 of 15</b></span>
-          <span>Proj. rank <b>10</b></span>
-          <span>Gap to proj. <b>-40.00</b></span>
-          <span>Bench points left <b>11.90</b></span>
-          <span>Waiver money <b>$345</b></span>
-          
+          <span>Age <b>26.4</b></span>
+          <span>Under-24 value <b>23%</b></span>
+          <span>Roster value <b>41.7k</b></span>
+          <span>Trades <b>0</b></span>
+          <span>Wire moves <b>5</b></span>
+          <span>2027+28 firsts <b>2</b></span>
+          <span>Week 1 <b>vs TexasTimeshifts</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">12</div>
-          <div><div class="cap-nm">TexasTimeshifts<small>TexasTimeshifts &middot; division 3</small></div></div>
-          <div class="cap-ppg"><b>93.34</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Do it to them<small>CarlosMalagon &middot; division 2</small></div></div>
+          <div class="cap-ppg"><b>137.8</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">The lineup card cost it</div>
-        <span class="bar"><i style='flex:0.3325;background:var(--qb)'>31.0</i><i style='flex:0.3771;background:var(--rb)'>35.2</i><i style='flex:0.0954;background:var(--wr)'>8.9</i><i style='flex:0.1950;background:var(--te)'>18.2</i></span>
-        <p>Left <b>54.00</b> points on the bench, most in the league. Mike Gesicki
-(25.80) and Kyle Monangai (22.10) both outscored every TexasTimeshifts starter from a seat. It
-scored <b>93.34</b>, was projected <b>152.8</b>, and lost by <b>34.23</b> as a
-2.8-point favourite. Jaylen Waddle still plays Monday. The roster was not the problem.</p>
+        <div class="cap-tag">One quarterback</div>
+        <span class="bar"><i style='flex:0.1640;background:var(--qb)'>22.6</i><i style='flex:0.4043;background:var(--rb)'>55.7</i><i style='flex:0.2158;background:var(--wr)'>29.7</i><i style='flex:0.2159;background:var(--te)'>29.8</i></span>
+        <p>Bo Nix, and nobody else. The superflex slot goes to <b>Aaron Jones</b>, a running back, for 12.8 points
+against 18.7 for the typical team. That is <b>5.8</b> points a week, self-inflicted, in a
+format built to punish it. Saquon Barkley leads a backfield worth 55.7. The rest is a fine
+middle-of-the-table roster. 3 waiver moves all summer says the hole is not being worked. The
+schedule hardens after week 7, from 109.3 to 128.9.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 93.34 to 127.57</b></span>
-          <span>Opponent <b>bLuE BaLLeRs</b></span>
-          <span>Beat <b>4 of 15</b></span>
-          <span>Proj. rank <b>8</b></span>
-          <span>Gap to proj. <b>-59.46</b></span>
-          <span>Bench points left <b>54.00</b></span>
-          <span>Waiver money <b>$347</b></span>
-          <span>Monday night <b>Jaylen Waddle</b></span>
+          <span>Age <b>25.8</b></span>
+          <span>Under-24 value <b>29%</b></span>
+          <span>Roster value <b>43.1k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>3</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Child Support 💸</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">13</div>
-          <div><div class="cap-nm">Loud and Stroud<small>Zaiah2000 &middot; division 3</small></div></div>
-          <div class="cap-ppg"><b>91.13</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Vick2times<small>vick2times &middot; division 1</small></div></div>
+          <div class="cap-ppg"><b>136.4</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Still one man short</div>
-        <span class="bar"><i style='flex:0.2110;background:var(--qb)'>19.2</i><i style='flex:0.1800;background:var(--rb)'>16.4</i><i style='flex:0.5432;background:var(--wr)'>49.5</i><i style='flex:0.0658;background:var(--te)'>6.0</i></span>
-        <p>Scored <b>91.13</b> against the fifth-highest total in the league and lost
-by <b>74.14</b>. C.J. Stroud was its only quarterback and gave it <b>19.23</b>. The ninth slot, the
-one meant for a second quarterback, went to Tre Tucker for <b>4.70</b>. Devaughn Vele led the team at
-<b>20.00</b> from flex. Stroud plus Vele was 43% of the roster’s output.</p>
+        <div class="cap-tag">Young, still paying</div>
+        <span class="bar"><i style='flex:0.2578;background:var(--qb)'>35.2</i><i style='flex:0.2149;background:var(--rb)'>29.3</i><i style='flex:0.3404;background:var(--wr)'>46.4</i><i style='flex:0.1869;background:var(--te)'>25.5</i></span>
+        <p>Tied for the youngest roster at <b>23.7</b>, with <b>50%</b> of its
+value under 24. Colston Loveland is the best asset and a real one in this format. Cam Ward is the warning:
+down <b>712</b> in 30 days, the steepest fall of any player on any roster. The young quarterback lottery is
+mostly losing tickets. Receiver is fine at 46.4. Running back is 29.3. This rebuild has
+not reached the part where it pays.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 91.13 to 165.27</b></span>
-          <span>Opponent <b>SlickBears</b></span>
-          <span>Beat <b>3 of 15</b></span>
-          <span>Proj. rank <b>16</b></span>
-          <span>Gap to proj. <b>-15.17</b></span>
-          <span>Bench points left <b>17.55</b></span>
-          <span>Waiver money <b>$356</b></span>
-          
+          <span>Age <b>23.7</b></span>
+          <span>Under-24 value <b>50%</b></span>
+          <span>Roster value <b>41.2k</b></span>
+          <span>Trades <b>2</b></span>
+          <span>Wire moves <b>6</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs Chosen one.</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">14</div>
-          <div><div class="cap-nm">Demboyz<small>88boyz11 &middot; division 2</small></div></div>
-          <div class="cap-ppg"><b>90.90</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Blue Tent All-Stars<small>SmokeySupremacy &middot; division 1</small></div></div>
+          <div class="cap-ppg"><b>123.8</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Nine starters, no top end</div>
-        <span class="bar"><i style='flex:0.4070;background:var(--qb)'>37.0</i><i style='flex:0.1925;background:var(--rb)'>17.5</i><i style='flex:0.1683;background:var(--wr)'>15.3</i><i style='flex:0.2321;background:var(--te)'>21.1</i></span>
-        <p>Nine starters, none above <b>18.77</b>. Jared Goff was the leading scorer. It was
-projected <b>9th</b> and finished <b>14th</b>, the biggest drop in rank in the
-league. No injury, no
-lineup mistake, and it started <b>92.7%</b> of the points available to it, fourth best. There was just
-nothing there. It drew The People’s Champ and lost by 99.94.</p>
+        <div class="cap-tag">The most future</div>
+        <span class="bar"><i style='flex:0.2916;background:var(--qb)'>36.1</i><i style='flex:0.2368;background:var(--rb)'>29.3</i><i style='flex:0.1605;background:var(--wr)'>19.9</i><i style='flex:0.3112;background:var(--te)'>38.5</i></span>
+        <p><b>59%</b> of the value is in players under 24, the highest share in the league,
+and it is tied for youngest at 23.7. Omarion Hampton is the centerpiece at 23. Emmett Johnson is
+the second-biggest 30-day riser on any roster. The cost is now: <b>19.9</b> points a week from
+receiver, 15th in the league, and a week 1 lineup that starts three tight
+ends because everything else at flex is worse. 3 firsts across 2027 and 2028 is real
+capital. But its own 2027 first belongs to Demboyz, so a season like this one pays nothing back.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 90.90 to 190.84</b></span>
-          <span>Opponent <b>The People’s Champ</b></span>
-          <span>Beat <b>2 of 15</b></span>
-          <span>Proj. rank <b>9</b></span>
-          <span>Gap to proj. <b>-52.00</b></span>
-          <span>Bench points left <b>7.20</b></span>
-          <span>Waiver money <b>$163</b></span>
-          
+          <span>Age <b>23.7</b></span>
+          <span>Under-24 value <b>59%</b></span>
+          <span>Roster value <b>39.5k</b></span>
+          <span>Trades <b>1</b></span>
+          <span>Wire moves <b>21</b></span>
+          <span>2027+28 firsts <b>3</b></span>
+          <span>Week 1 <b>vs Remember the raiders</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">15</div>
-          <div><div class="cap-nm">Vick2times<small>vick2times &middot; division 1</small></div></div>
-          <div class="cap-ppg"><b>73.07</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">The Comeback Kid<small>JoshuaR23 &middot; division 4</small></div></div>
+          <div class="cap-ppg"><b>107.6</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Three zeros</div>
-        <span class="bar"><i style='flex:0.2021;background:var(--qb)'>14.8</i><i style='flex:0.3654;background:var(--rb)'>26.7</i><i style='flex:0.4325;background:var(--wr)'>31.6</i><i style='flex:0.0000;background:var(--te)'>0.0</i></span>
-        <p>Lowest completed score in the league at <b>73.07</b>. Kyler Murray threw five
-passes and took a concussion for <b>0.80</b>. Colston Loveland and Romeo Doubs both caught nothing.
-The other six starters combined for <b>72.27</b>, and nobody on the roster reached 16. Matthew Golden
-led it at <b>15.70</b>.</p>
+        <div class="cap-tag">Seven trades</div>
+        <span class="bar"><i style='flex:0.1601;background:var(--qb)'>17.2</i><i style='flex:0.1562;background:var(--rb)'>16.8</i><i style='flex:0.1816;background:var(--wr)'>19.5</i><i style='flex:0.5021;background:var(--te)'>54.0</i></span>
+        <p><b>7 of the league's 14 trades.</b> 21 waiver moves.
+15th. What is left is the strangest roster in the league: the best tight end production
+anywhere at <b>54.0</b> points a week, off Mark Andrews (31), Dallas Goedert (31) and Darren
+Waller, plus the worst quarterback, running back and receiver groups in the league at 17.2,
+16.8 and 19.5. T.J. Hockenson came in April and left in July. Chuba Hubbard came in April
+and left in June. He holds <b>1</b> first across the next two drafts. Both of his own went
+to Bay Area. Week 1 is CeeDees TDs.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 73.07 to 128.83</b></span>
-          <span>Opponent <b>Chosen one.</b></span>
-          <span>Beat <b>1 of 15</b></span>
-          <span>Proj. rank <b>13</b></span>
-          <span>Gap to proj. <b>-63.33</b></span>
-          <span>Bench points left <b>27.55</b></span>
-          <span>Waiver money <b>$495</b></span>
-          
+          <span>Age <b>26.0</b></span>
+          <span>Under-24 value <b>48%</b></span>
+          <span>Roster value <b>32.8k</b></span>
+          <span>Trades <b>7</b></span>
+          <span>Wire moves <b>21</b></span>
+          <span>2027+28 firsts <b>1</b></span>
+          <span>Week 1 <b>vs CeeDees TDs</b></span>
         </div>
       </article>
       <article class="cap">
         <div class="cap-top">
           <div class="cap-rk">16</div>
-          <div><div class="cap-nm">Do it to them<small>CarlosMalagon &middot; division 2</small></div></div>
-          <div class="cap-ppg"><b>67.50</b><small>week 1 points</small></div>
+          <div><div class="cap-nm">Loud and Stroud<small>Zaiah2000 &middot; division 3</small></div></div>
+          <div class="cap-ppg"><b>106.3</b><small>proj. pts/wk</small></div>
         </div>
-        <div class="cap-tag">Last, and the quarterback slot is why</div>
-        <span class="bar"><i style='flex:0.0000;background:var(--qb)'>0.0</i><i style='flex:0.6207;background:var(--rb)'>41.9</i><i style='flex:0.2548;background:var(--wr)'>17.2</i><i style='flex:0.1244;background:var(--te)'>8.4</i></span>
-        <p>Last at <b>67.50</b>, and it lost to every other score on the board. Bo Nix
-and RJ Harvey play Monday night, worth a projected <b>32.10</b>, which would put it near
-<b>99.60</b>. It is the team that went into the season with one startable quarterback and it got
-<b>0.00</b> from the position through Sunday. It has <b>$636</b> in waiver money left,
-most in the league. Wednesday matters.</p>
+        <div class="cap-tag">No ninth man</div>
+        <span class="bar"><i style='flex:0.1603;background:var(--qb)'>17.0</i><i style='flex:0.2082;background:var(--rb)'>22.1</i><i style='flex:0.5175;background:var(--wr)'>55.0</i><i style='flex:0.1141;background:var(--te)'>12.1</i></span>
+        <p>Lowest projection in the league, and the most fixable reason for it. There is no second quarterback.
+C.J. Stroud starts, and the superflex slot goes to <b>Devaughn Vele</b>, a receiver, for 10.4 points
+against 18.7 for the typical team. That is <b>8.3</b> points a week given away before kickoff.
+Tetairoa McMillan leads a receiver room worth 55.0,
+2nd in the league, so the material is there. Tight end is 12.1,
+16th, in the format that rewards it most. No trades all summer. Remember the
+raiders has four quarterbacks. That call should have been made in July.</p>
         <div class="cap-meta">
-          <span>Result <b>Lost 67.50 to 177.35</b></span>
-          <span>Opponent <b>Child Support 💸</b></span>
-          <span>Beat <b>0 of 15</b></span>
-          <span>Proj. rank <b>12</b></span>
-          <span>Gap to proj. <b>-70.30</b></span>
-          <span>Bench points left <b>25.57</b></span>
-          <span>Waiver money <b>$636</b></span>
-          <span>Monday night <b>Bo Nix, RJ Harvey</b></span>
+          <span>Age <b>24.3</b></span>
+          <span>Under-24 value <b>50%</b></span>
+          <span>Roster value <b>33.4k</b></span>
+          <span>Trades <b>0</b></span>
+          <span>Wire moves <b>13</b></span>
+          <span>2027+28 firsts <b>3</b></span>
+          <span>Week 1 <b>vs SlickBears</b></span>
         </div>
       </article>
     </div>
@@ -1078,69 +950,51 @@ most in the league. Wednesday matters.</p>
     <div class="panel">
       <dl>
         <div>
-          <dt>Week 1 points</dt>
-          <dd>Actual points scored by the nine players each manager started, taken from this league’s
-          own matchup results. Not a projection. Every total on this page is through Sunday night,
-          September 13. Denver at Kansas City had not kicked off, so eight starting slots across five
-          rosters were still empty. Those five teams are marked with a dagger.</dd>
-        </div>
-        <div>
-          <dt>Why the Sleeper app may show a slightly different total</dt>
-          <dd>Numbers here come from the league’s matchup results. The Sleeper app can display a
-          team total up to <b>0.02</b> lower, because this league scores passing yards at 1 point per
-          30 and the app rounds that down at a different step. It only ever affects teams with a
-          quarterback, and it is never enough to change a result: the closest two scores in week 1
-          are <b>0.07</b> apart.</dd>
-        </div>
-        <div>
-          <dt>Kick and punt return yards</dt>
-          <dd>Voted in by the competition committee and applied <b>Friday, September 11</b>, at
-          1 point per 20 yards. It is in every number on this page. It was worth
-          <b>14.65</b> points across seven starting lineups in week 1.</dd>
+          <dt>Projected points per week</dt>
+          <dd>Each team's <b>best legal lineup</b> (QB, RB, RB, WR, WR, TE, FLEX, FLEX, SUPERFLEX)
+          scored against Sleeper's weekly 2026 projections, averaged over weeks 1 to 14. It assumes
+          every manager starts their best lineup every week. Nobody does. Read it as roster strength,
+          not a points forecast.</dd>
         </div>
         <div>
           <dt>Scored under MFFL settings, not standard PPR</dt>
           <dd>This league pays <b>+0.3 per completion</b>, <b>&minus;0.3 per incompletion</b>,
-          <b>+1.0 per rushing first down</b>, <b>+0.05 per kick or punt return yard</b>, and gives
-          tight ends <b>+0.6 per catch</b> and
-          <b>+1.0 per first down</b>. A 25-point week here is not a 25-point week anywhere else, and
-          Sleeper’s standard PPR field will not reproduce any number on this page.</dd>
+          <b>+1.0 per rushing first down</b>, and gives tight ends <b>+0.6 per catch</b> and
+          <b>+1.0 per first down</b>. Points here come from raw projected stats run against those
+          settings. Sleeper's <span style="font-family:var(--mono);font-size:.85em">pts_ppr</span>
+          field ignores all of it and misranks quarterbacks and tight ends in this league.</dd>
         </div>
         <div>
-          <dt>Beat</dt>
-          <dd>How many of the other fifteen scores that team’s total would have beaten. A team can go
-          1 and 0 having beaten only six other scores, or 0 and 1 having beaten ten. It separates the
-          week a roster had from the opponent it drew. Brute Force Attack beat ten of fifteen and
-          lost. Blue Tent All-Stars beat six and won.</dd>
+          <dt>Roster value and under-24 share</dt>
+          <dd>Dynasty trade values from FantasyCalc, set to superflex and full PPR, then adjusted by
+          position for MFFL scoring (QB &times;1.14, RB &times;1.43, TE &times;1.24, WR &times;1.00).
+          <b>Under-24 share</b> is the percentage of a roster's adjusted value held by players under 24.
+          It measures how a team is built, not how good it is.</dd>
         </div>
         <div>
-          <dt>Bench points left</dt>
-          <dd>The best legal lineup available in hindsight, minus what the manager actually started.
-          It is a scorekeeping number, not a verdict: nobody knows on Saturday which bench player was
-          going to score 25. The league left <b>370.02</b> points on benches in week 1
-          and started <b>84.1%</b> of what it had available.</dd>
+          <dt>Why not a 16-team value source</dt>
+          <dd>No public source is built for a 16-team superflex league with this scoring, so this page
+          says which compromise it made. FantasyCalc gets <b>superflex</b> right, which is by far the
+          setting that matters most here, but it caps at 14 teams: ask for 16 and it returns the
+          12-team table unchanged, re-verified September 9 across all 423 players.
+          <br><br>The cost is small. Moving from 12 to 14 teams shifts the median player <b>+0.61%</b>,
+          and <b>not one player in 423</b> moves more than five places in the overall order. RotoTrade
+          does support 16 teams, but only inside its per-trade analyzer; its published value chart is
+          1QB, which prices Josh Allen outside the top 25 and would be far more wrong here. The
+          young-versus-old split at the top of this page was checked against that second source anyway,
+          and holds either way.</dd>
         </div>
         <div>
-          <dt>Projected points per week</dt>
-          <dd>The preseason number published here on September 9: each roster’s best legal lineup
-          scored against Sleeper’s weekly 2026 projections and averaged over weeks 1 to 14. It assumes
-          a perfect lineup every week, so it runs high by design. The league came in
-          <b>23.65</b> under it on average. Read the gap as a measure of
-          the projection, not only of the team.</dd>
-        </div>
-        <div>
-          <dt>Under-24 share and average age</dt>
-          <dd>Carried forward unchanged from the September 9 edition: the percentage of a roster’s
-          dynasty trade value held by players under 24, from FantasyCalc set to superflex and full
-          PPR, then adjusted by position for MFFL scoring. It measures how a team is built. It is not
-          a rating.</dd>
+          <dt>The superflex baseline</dt>
+          <dd>Fourteen of sixteen teams fill the ninth lineup slot with a quarterback. The median week 1
+          output from that slot among those fourteen is <b>18.7</b> points. The two teams that use
+          a non-quarterback are measured against it.</dd>
         </div>
         <div>
           <dt>What this page is not</dt>
-          <dd>No projected records and no playoff odds. This is one week of results out of fourteen,
-          and the single largest thing it proved is that projections in September are soft. Three
-          teams beat their number. Thirteen did not. Check back in a month before deciding what any
-          of it meant.</dd>
+          <dd>No projected records, no playoff odds. Every number here comes from a projection, and
+          September projections are the least reliable of the year. Depth charts move through final
+          cuts, and one injury rewrites a capsule. Nothing here has watched a football game.</dd>
         </div>
       </dl>
     </div>
@@ -1148,10 +1002,13 @@ most in the league. Wednesday matters.</p>
 
   <footer>
     MFFL 2026 &middot; 16 teams &middot; 2QB superflex dynasty &middot; weeks 1 to 14 &middot; trade deadline week 9.
-    Built from Sleeper’s league, roster, matchup, transaction and player endpoints, scored under this
-    league’s own settings. Results current as of <strong>Monday morning, September 14, 2026</strong>,
-    with Denver at Kansas City unplayed. Preseason projections and roster-build figures are carried
-    forward from the September 9 edition. These are results, not scouting reports.
+    Built from Sleeper's league, roster, matchup, transaction and traded-pick endpoints and its weekly 2026
+    projections, scored under this league's settings, plus FantasyCalc dynasty values. Current as of
+    <strong>September 9, 2026</strong>: 14 completed trades since April and 230 free agent
+    and waiver moves. These are projections, not scouting reports.
   </footer>
 
 </div>
+
+</body>
+</html>

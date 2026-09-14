@@ -2,7 +2,7 @@
 
 Data-driven grades for all 16 teams in the MFFL 2026 rookie draft.
 
-**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)** · **[Trade history](https://jdiazdecaro.github.io/MFFL/trades.html)** · **[The Beat](https://jdiazdecaro.github.io/MFFL/beat.html)**
+**→ [Draft grades](https://jdiazdecaro.github.io/MFFL/)** · **[Strength of schedule](https://jdiazdecaro.github.io/MFFL/schedule.html)** · **[Trade history](https://jdiazdecaro.github.io/MFFL/trades.html)** · **[The Beat](https://jdiazdecaro.github.io/MFFL/beat.html)** · **[Beat archive](https://jdiazdecaro.github.io/MFFL/beat/)**
 
 ## League
 
@@ -22,7 +22,8 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
 - **The Beat** (`beat.html`) — a weekly newspaper-style column. The current edition covers week 1 results: the eight box scores, the best and worst individual games, projection against actual, league-wide trends, the injury wire, the trade block and roster moves, and a
-capsule on all 16 teams.
+capsule on all 16 teams. Past editions are archived under
+  [`beat/`](https://jdiazdecaro.github.io/MFFL/beat/) and kept exactly as they ran.
 
 ## Method
 
@@ -52,6 +53,11 @@ first downs and tight-end premium and misranks QBs and TEs as a result.
 
 An edition published before every NFL game of the week is final says so in its snapshot line, and marks
 the teams with players still to play.
+
+`beat.html` is always the current edition, so a link shared with the league keeps working. When a new one
+is published the outgoing edition is frozen into `beat/YYYY-MM-DD.html` with a banner marking it as past,
+and listed at `beat/index.html`. Archived editions are never rewritten: a number in an old edition is what
+was known that morning.
 
 Kick and punt return yards were voted in by the competition committee on 2026-09-11 at 1 point per 20 and
 are included throughout. Note that the Sleeper app can display a team total up to 0.02 below the figure
