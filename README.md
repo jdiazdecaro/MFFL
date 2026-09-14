@@ -21,7 +21,8 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
-- **The Beat** (`beat.html`) — a weekly newspaper-style column. The current edition covers week 1 results: the eight box scores, the best and worst individual games, projection against actual, league-wide trends, the injury wire, and a capsule on all 16 teams.
+- **The Beat** (`beat.html`) — a weekly newspaper-style column. The current edition covers week 1 results: the eight box scores, the best and worst individual games, projection against actual, league-wide trends, the injury wire, the trade block and roster moves, and a
+capsule on all 16 teams.
 
 ## Method
 
@@ -51,6 +52,11 @@ first downs and tight-end premium and misranks QBs and TEs as a result.
 
 An edition published before every NFL game of the week is final says so in its snapshot line, and marks
 the teams with players still to play.
+
+Kick and punt return yards were voted in by the competition committee on 2026-09-11 at 1 point per 20 and
+are included throughout. Note that the Sleeper app can display a team total up to 0.02 below the figure
+here: this league scores passing yards at 1 point per 30, and the app rounds that down at a different
+step. The page uses the league's matchup results, which match a recomputation from raw stats exactly.
 
 Roster value and the under-24 share come from FantasyCalc dynasty values (superflex, full PPR) with a
 positional correction for MFFL scoring (QB ×1.14, RB ×1.43, TE ×1.24, WR ×1.00). Pick ownership is read
