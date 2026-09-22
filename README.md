@@ -21,7 +21,7 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
-- **The Beat** (`beat.html`) — a newspaper-style column. The September 17 edition leads with the waiver cycle, Bay Area–CeeDees as matchup of the week, and the injury report. It also covers moves since Monday, Monday’s scoring headline and a second matchup spotlight, then closes with all 16 team storylines. The outgoing September 14 edition is preserved in the archive under [`beat/`](https://jdiazdecaro.github.io/MFFL/beat/archive.html).
+- **The Beat** (`beat.html`) — No. 4, September 21: Week 2 injuries lead the edition, followed by verified MFFL waiver availability, the week’s main results, the Boston trade and all sixteen team storylines. No. 3 is preserved in `beat/2026-09-17.html`.
 
 ## Method
 
