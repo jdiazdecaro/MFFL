@@ -21,7 +21,7 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
-- **The Beat** (`beat.html`) — No. 4, September 21: Week 2 injuries lead the edition, followed by verified MFFL waiver availability, the week’s main results, the Boston trade and all sixteen team storylines. No. 3 is preserved in `beat/2026-09-17.html`.
+- **The Beat** (`beat.html`) — No. 5, September 24: the $322 waiver night, Mariota’s $268 winning bid, Penix’s Thursday arrival, the unbeaten East showdown, all eight Week 3 matchups and updated FAAB balances. No. 4 is preserved in `beat/2026-09-21.html`.
 
 ## Method
 
