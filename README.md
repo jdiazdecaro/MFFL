@@ -83,3 +83,5 @@ The top of the board is far firmer than the bottom. Value figures are model outp
 ## Source
 
 Built from `api.sleeper.app` draft, roster, user, transaction, and player endpoints. Draft ID `1328167060039020544`, league ID `1328167060034834432`. Trade history additionally uses the 2022–2025 league IDs.
+
+The Beat uses the Halloween-season decorations for editions through October 31, 2026: masthead cobwebs, pumpkins, warm orange accents and a scroll-linked graveyard hand. The hand stays visible without scroll motion when reduced motion is enabled.
