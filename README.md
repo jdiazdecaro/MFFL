@@ -21,7 +21,7 @@ Starting lineup: QB · RB · RB · WR · WR · TE · FLEX · FLEX · SUPERFLEX
 - **Draft grades** (`index.html`) — all 16 teams graded on the 2026 rookie draft.
 - **Strength of schedule** (`schedule.html`) — 14-week schedules ranked easiest to hardest, with an early/late split, each team's toughest matchup, and its worst bye-week collision.
 - **Trade history** (`trades.html`) — five seasons of completed trades by calendar month, the two events that drive them, and the in-season week profile.
-- **The Beat** (`beat.html`) — No. 12, October 27: featured trade deadline countdown, all eight Week 7 recaps, sixteen team trade briefs, injury updates and deep-league waiver adds. No. 11 is preserved in `beat/2026-10-20.html`.
+- **The Beat** (`beat.html`) — No. 13, November 2: light-only postgame edition, Week 8 finals, Week 9 outlook, Cancún feature, playoff projections and committee watch. No. 12 is preserved in `beat/2026-10-27.html`.
 
 ## Method
 
